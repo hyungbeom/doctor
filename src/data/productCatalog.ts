@@ -4,6 +4,8 @@ export type CatalogProduct = {
   productId: string;
   productName: string;
   searchKeywords?: string[];
+  /** 관리자에서 비노출 처리 시 공개 목록·검색에서 제외 */
+  hidden?: boolean;
 };
 
 export type CatalogBrand = {
@@ -61,6 +63,7 @@ function flattenProducts(catalog: ProductCatalog): FlatProduct[] {
     for (const equipmentType of category.equipmentTypes) {
       for (const brand of equipmentType.brands) {
         for (const product of brand.products ?? []) {
+          if (product.hidden) continue;
           result.push({
             productId: product.productId,
             productName: product.productName,

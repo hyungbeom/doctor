@@ -166,7 +166,7 @@ export default function LoginPage() {
                   />
                   아이디 저장하기
                 </label>
-                <Link href="#" className={styles.findLink}>
+                <Link href="/login/find-account" className={styles.findLink}>
                   아이디 / 비밀번호 찾기
                 </Link>
               </div>

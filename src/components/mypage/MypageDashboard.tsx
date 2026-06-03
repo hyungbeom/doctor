@@ -3,23 +3,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo } from "react";
+import { useMypageCmsData } from "@/hooks/useMypageCmsData";
 import styles from "@/app/mypage/mypage.module.css";
 import {
   asTickets,
   contracts,
   credentialDocs,
   demoPipeline,
-  demoRequests,
   getProfileDisplayName,
   getWarrantyProgress,
   hospitalAddresses,
-  inquiries,
   mypageAccountManager,
   mypageMemberProfile,
   mypageNavItems,
   ownedEquipment,
   quotePipeline,
-  quoteRequests,
   recentProducts,
   taxDocuments,
   wishlistItems,
@@ -28,6 +26,23 @@ import {
 import { getMemberId } from "@/hooks/useMemberSession";
 import { buildProductDetailUrl } from "@/lib/productListUrl";
 import { getProductImage } from "@/lib/productImage";
+import {
+  mypageContract,
+  mypageCredentialRenew,
+  mypageDemo,
+  mypageDemoApply,
+  mypageDocuments,
+  mypageEquipmentAs,
+  mypageEquipmentSupplies,
+  mypageInquiries,
+  mypageInquiry,
+  mypageInquiryNew,
+  mypageQuote,
+  mypageRecent,
+  mypageSettings,
+  mypageWishlistCompare,
+  quoteRequest,
+} from "@/lib/mypageRoutes";
 
 function PipelineBar({ title, steps }: { title: string; steps: PipelineStep[] }) {
   return (
@@ -89,6 +104,7 @@ function Section({ id, icon, title, desc, children }: SectionProps) {
 }
 
 export default function MypageDashboard() {
+  const { quotes: quoteRequests, demos: demoRequests, inquiries } = useMypageCmsData();
   const memberId = getMemberId();
   const profile = useMemo(
     () => ({ ...mypageMemberProfile, memberId: memberId ?? "guest" }),
@@ -172,7 +188,9 @@ export default function MypageDashboard() {
                 <article key={item.id} className={styles.itemCard}>
                   <div className={styles.itemHead}>
                     <div>
-                      <p className={styles.itemId}>{item.id}</p>
+                      <p className={styles.itemId}>
+                        <Link href={mypageQuote(item.id)}>{item.id}</Link>
+                      </p>
                       <h3 className={styles.itemTitle}>
                         {item.productId ? (
                           <Link href={buildProductDetailUrl(item.productId)}>{item.productName}</Link>
@@ -186,13 +204,20 @@ export default function MypageDashboard() {
                   </div>
                   <div className={styles.itemActions}>
                     {item.hasQuotePdf && (
-                      <button type="button" className={styles.btnPrimary}>
+                      <Link href={mypageQuote(item.id)} className={styles.btnPrimary}>
                         견적서 열람/다운로드
-                      </button>
+                      </Link>
                     )}
-                    <button type="button" className={styles.btnOutline}>
+                    <Link
+                      href={mypageInquiryNew({
+                        quoteId: item.id,
+                        productId: item.productId,
+                        subject: `${item.productName} 재협상 요청`,
+                      })}
+                      className={styles.btnOutline}
+                    >
                       재협상/수정 요청
-                    </button>
+                    </Link>
                   </div>
                 </article>
               ))}
@@ -208,9 +233,9 @@ export default function MypageDashboard() {
                   </div>
                   <div className={styles.itemActionsInline}>
                     <StatusBadge status={item.status} />
-                    <button type="button" className={styles.btnGhost}>
+                    <Link href={mypageContract(item.id)} className={styles.btnGhost}>
                       계약서 보기
-                    </button>
+                    </Link>
                   </div>
                 </article>
               ))}
@@ -223,12 +248,19 @@ export default function MypageDashboard() {
             title="데모 장비 신청 관리"
             desc="도입 전 장비 대여·테스트 일정과 담당자 정보를 추적합니다."
           >
+            <div className={styles.sectionActions}>
+              <Link href={mypageDemoApply()} className={styles.btnPrimary}>
+                데모 신청하기
+              </Link>
+            </div>
             <div className={styles.cardList}>
               {demoRequests.map((item) => (
                 <article key={item.id} className={styles.itemCard}>
                   <div className={styles.itemHead}>
                     <div>
-                      <p className={styles.itemId}>{item.id}</p>
+                      <p className={styles.itemId}>
+                        <Link href={mypageDemo(item.id)}>{item.id}</Link>
+                      </p>
                       <h3 className={styles.itemTitle}>
                         {item.productId ? (
                           <Link href={buildProductDetailUrl(item.productId)}>{item.productName}</Link>
@@ -245,13 +277,16 @@ export default function MypageDashboard() {
                     </div>
                     <StatusBadge status={item.status} />
                   </div>
-                  {item.status === "데모 종료" && (
-                    <div className={styles.itemActions}>
-                      <button type="button" className={styles.btnPrimary}>
+                  <div className={styles.itemActions}>
+                    <Link href={mypageDemo(item.id)} className={styles.btnGhost}>
+                      상세 보기
+                    </Link>
+                    {item.status === "데모 종료" && (
+                      <Link href={quoteRequest(item.productId)} className={styles.btnPrimary}>
                         이 장비 견적 요청하기
-                      </button>
-                    </div>
-                  )}
+                      </Link>
+                    )}
+                  </div>
                 </article>
               ))}
             </div>
@@ -289,9 +324,9 @@ export default function MypageDashboard() {
                       </div>
                       <p className={styles.warrantyEnd}>만료 {item.warrantyEnd}</p>
                     </div>
-                    <button type="button" className={styles.btnOutline}>
+                    <Link href={mypageEquipmentSupplies(item.id)} className={styles.btnOutline}>
                       소모품 추가 견적 요청
-                    </button>
+                    </Link>
                   </article>
                 );
               })}
@@ -312,9 +347,15 @@ export default function MypageDashboard() {
                     </div>
                     <StatusBadge status={item.status} />
                   </div>
-                  <button type="button" className={styles.btnPrimary}>
+                  <Link
+                    href={mypageEquipmentAs(
+                      ownedEquipment.find((eq) => eq.productName === item.productName)?.id ??
+                        "EQ-001",
+                    )}
+                    className={styles.btnPrimary}
+                  >
                     A/S 접수 (증상·사진 첨부)
-                  </button>
+                  </Link>
                 </article>
               ))}
             </div>
@@ -326,6 +367,11 @@ export default function MypageDashboard() {
             title="증빙 및 서류 관리"
             desc="세무·의료기관 증빙 서류를 한곳에서 조회합니다."
           >
+            <div className={styles.sectionActions}>
+              <Link href={mypageDocuments()} className={styles.btnOutline}>
+                서류함 전체 보기
+              </Link>
+            </div>
             <h3 className={styles.subTitle}>세무 증빙 서류함</h3>
             <div className={styles.tableWrap}>
               <table className={styles.table}>
@@ -344,9 +390,9 @@ export default function MypageDashboard() {
                       <td>{doc.issuedAt}</td>
                       <td>{doc.amount}</td>
                       <td>
-                        <button type="button" className={styles.btnGhost}>
+                        <Link href={mypageDocuments()} className={styles.btnGhost}>
                           출력
-                        </button>
+                        </Link>
                       </td>
                     </tr>
                   ))}
@@ -363,9 +409,9 @@ export default function MypageDashboard() {
                   <p className={styles.itemMeta}>
                     {doc.expiresAt === "—" ? "유효기간 —" : `만료 ${doc.expiresAt}`}
                   </p>
-                  <button type="button" className={styles.btnOutline}>
+                  <Link href={mypageCredentialRenew(doc.id)} className={styles.btnOutline}>
                     갱신 등록
-                  </button>
+                  </Link>
                 </article>
               ))}
             </div>
@@ -399,11 +445,16 @@ export default function MypageDashboard() {
                 </article>
               ))}
             </div>
-            <button type="button" className={styles.btnPrimary}>
+            <Link href={mypageWishlistCompare()} className={styles.btnPrimary}>
               선택 장비 스펙 비교하기 (최대 3개)
-            </button>
+            </Link>
 
-            <h3 className={styles.subTitle}>최근 본 상품</h3>
+            <h3 className={styles.subTitle}>
+              최근 본 상품{" "}
+              <Link href={mypageRecent()} className={styles.inlineMore}>
+                전체 보기
+              </Link>
+            </h3>
             <ul className={styles.recentList}>
               {recentProducts.map((item) => (
                 <li key={item.id}>
@@ -423,11 +474,18 @@ export default function MypageDashboard() {
             desc="1:1 문의와 병원·설치지 정보를 관리합니다."
           >
             <h3 className={styles.subTitle}>1:1 문의 / 장비 문의</h3>
+            <div className={styles.sectionActions}>
+              <Link href={mypageInquiries()} className={styles.btnGhost}>
+                문의 전체 보기
+              </Link>
+            </div>
             <div className={styles.cardList}>
               {inquiries.map((item) => (
                 <article key={item.id} className={styles.itemCardCompact}>
                   <div>
-                    <p className={styles.itemTitle}>{item.subject}</p>
+                    <p className={styles.itemTitle}>
+                      <Link href={mypageInquiry(item.id)}>{item.subject}</Link>
+                    </p>
                     <p className={styles.itemMeta}>
                       {item.target} · {item.createdAt}
                     </p>
@@ -436,9 +494,9 @@ export default function MypageDashboard() {
                 </article>
               ))}
             </div>
-            <button type="button" className={styles.btnOutline}>
+            <Link href={mypageInquiryNew()} className={styles.btnOutline}>
               새 문의 작성
-            </button>
+            </Link>
 
             <h3 className={styles.subTitle}>병원 정보 및 배송지 설정</h3>
             <div className={styles.cardList}>
@@ -451,9 +509,9 @@ export default function MypageDashboard() {
                     </p>
                     <p className={styles.itemMeta}>{addr.address}</p>
                   </div>
-                  <button type="button" className={styles.btnGhost}>
+                  <Link href={mypageSettings()} className={styles.btnGhost}>
                     수정
-                  </button>
+                  </Link>
                 </article>
               ))}
             </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Header from "@/components/chutcha/Header";
 import HeroSection from "@/components/chutcha/HeroSection";
 import ThemeSection from "@/components/chutcha/ThemeSection";
@@ -13,17 +14,18 @@ import {
   medicalProducts,
   monthlyPickProducts,
   reviews,
-  news,
-  siteNotices,
   footerBanner,
   companyInfo,
 } from "@/data/homeData";
+import { getPublicCms } from "@/lib/cms/public";
 
-export default function Home() {
+export default async function Home() {
+  const { hero, gnb, news, siteNotices } = await getPublicCms();
+
   return (
     <div className={styles.page}>
       <PagePopups />
-      <Header />
+      <Header gnbItems={gnb} />
 
       <div className={styles.floatLeft}>
         <WeeklyHotBanner />
@@ -34,7 +36,7 @@ export default function Home() {
       </div>
 
       <main>
-        <HeroSection>
+        <HeroSection hero={hero}>
           <ThemeSection title="추천 의료장비" products={medicalProducts} />
 
           <SalesGuideCarousel />
@@ -85,13 +87,13 @@ export default function Home() {
         <section className={styles.newsWrap}>
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>따끈 따끈, Alpexmedi 소식</h2>
-            <a href="#" className={styles.viewAll}>
+            <a href="/board?tab=news" className={styles.viewAll}>
               전체보기
             </a>
             <ul className={styles.newsList}>
               {news.map((item) => (
-                <li key={item.title}>
-                  <a href={item.href}>
+                <li key={item.id}>
+                  <Link href={item.href}>
                     <dl>
                       <dd className={styles.newsThumb}>
                         <Image
@@ -107,7 +109,7 @@ export default function Home() {
                         <strong>{item.source}</strong> · {item.date}
                       </dd>
                     </dl>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -115,17 +117,17 @@ export default function Home() {
               <h3>공지</h3>
               <ul className={styles.noticeList}>
                 {siteNotices.map((notice) => (
-                  <li key={notice.title}>
-                    <a href={notice.href}>
+                  <li key={notice.id}>
+                    <Link href={notice.href}>
                       <dl>
                         <dt>{notice.title}</dt>
                         <dd>{notice.date}</dd>
                       </dl>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
-              <a href="#" className={`${styles.viewAll} ${styles.viewAllBlue}`}>
+              <a href="/board?tab=notice" className={`${styles.viewAll} ${styles.viewAllBlue}`}>
                 전체보기
               </a>
             </div>
@@ -195,12 +197,12 @@ export default function Home() {
                 <a href="#">개인정보 처리방침</a>
               </li>
               <li>
-                <a href="#" className={styles.linkBlue}>
+                <a href="/quote/request" className={styles.linkBlue}>
                   견적 요청
                 </a>
               </li>
               <li>
-                <a href="#">자료실</a>
+                <a href="/resources">자료실</a>
               </li>
             </ul>
           </div>

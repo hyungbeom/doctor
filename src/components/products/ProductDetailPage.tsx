@@ -16,6 +16,7 @@ import {
   type FlatProduct,
 } from "@/data/productCatalog";
 import { buildProductListUrl } from "@/lib/productListUrl";
+import { mypageDemoApply, mypageInquiryNew, quoteRequest } from "@/lib/mypageRoutes";
 import ProductImageCarousel from "./ProductImageCarousel";
 import ProductRecommendSections from "./ProductRecommendSections";
 
@@ -135,9 +136,15 @@ export default function ProductDetailPage({ product }: ProductDetailPageProps) {
                   </p>
                 </div>
               </div>
-              <button type="button" className={styles.inquiryBtn}>
+              <Link
+                href={mypageInquiryNew({
+                  productId: product.productId,
+                  subject: `${product.productName} 장비 문의`,
+                })}
+                className={styles.inquiryBtn}
+              >
                 장비 문의
-              </button>
+              </Link>
             </div>
 
             <div className={styles.quoteCard}>
@@ -167,12 +174,12 @@ export default function ProductDetailPage({ product }: ProductDetailPageProps) {
                 </li>
               </ul>
               <div className={styles.quoteActions}>
-                <button type="button" className={styles.quoteActionBtn}>
-                  구매 계산기
-                </button>
-                <button type="button" className={styles.quoteActionBtn}>
-                  공유하기
-                </button>
+                <Link href={quoteRequest(product.productId)} className={styles.quoteActionBtn}>
+                  견적 요청
+                </Link>
+                <Link href={mypageDemoApply(product.productId)} className={styles.quoteActionBtn}>
+                  데모 신청
+                </Link>
               </div>
             </div>
 

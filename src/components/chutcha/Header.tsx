@@ -5,12 +5,16 @@ import Link from "next/link";
 import { gsap } from "gsap";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import styles from "@/app/chutcha.module.css";
-import { gnbItems } from "@/data/homeData";
+import { gnbItems as defaultGnbItems, type GnbItem } from "@/data/homeData";
 import HeaderMemberNav from "./HeaderMemberNav";
+
+type HeaderProps = {
+  gnbItems?: GnbItem[];
+};
 
 const TOP_BANNER_KEY = "topBannerDismissed";
 
-export default function Header() {
+export default function Header({ gnbItems = defaultGnbItems }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [bannerVisible, setBannerVisible] = useState<boolean | null>(null);
 
@@ -162,10 +166,10 @@ export default function Header() {
 
           <div className={styles.headerRight}>
             <HeaderMemberNav variant="desktop" />
-            <button type="button" className={styles.recentBtn} title="최근 본 상품">
+            <Link href="/mypage/recent" className={styles.recentBtn} title="최근 본 상품">
               <span className={styles.recentLabel}>최근 본 상품</span>
               <span className={styles.recentCount}>0</span>
-            </button>
+            </Link>
             <button
               type="button"
               className={styles.menuToggle}

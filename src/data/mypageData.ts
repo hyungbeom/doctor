@@ -328,3 +328,31 @@ export function getProfileDisplayName(profile: MemberProfile): string {
 export function getWarrantyProgress(daysLeft: number, totalDays = 730): number {
   return Math.min(100, Math.max(0, Math.round((daysLeft / totalDays) * 100)));
 }
+
+export function getQuoteById(id: string): QuoteRequest | undefined {
+  return quoteRequests.find((item) => item.id === id);
+}
+
+export function getContractById(id: string): Contract | undefined {
+  return contracts.find((item) => item.id === id);
+}
+
+export function getDemoById(id: string): DemoRequest | undefined {
+  return demoRequests.find((item) => item.id === id);
+}
+
+export function getEquipmentById(id: string): OwnedEquipment | undefined {
+  return ownedEquipment.find((item) => item.id === id);
+}
+
+export function getInquiryById(id: string): Inquiry | undefined {
+  return inquiries.find((item) => item.id === id);
+}
+
+export function getCredentialDocById(id: string): CredentialDoc | undefined {
+  return credentialDocs.find((item) => item.id === id);
+}
+
+export function getTaxDocumentById(id: string): TaxDocument | undefined {
+  return taxDocuments.find((item) => item.id === id);
+}

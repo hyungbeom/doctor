@@ -38,14 +38,24 @@ export const heroCategoryItems = [
   { label: "초음파 진단기", href: "#" },
 ];
 
-export const gnbItems: GnbItem[] = productCatalog.categories.map((category) => ({
+/** 상단 GNB — 사이트 메뉴 (카테고리는 제품리스트·검색에서 선택) */
+export const gnbItems: GnbItem[] = [
+  { id: "products", label: "제품리스트", href: "/products" },
+  { id: "board", label: "게시판", href: "/board" },
+  { id: "guide", label: "견적·데모", href: "/guide" },
+  { id: "resources", label: "자료실", href: "/resources" },
+  { id: "support", label: "고객센터", href: "/support" },
+];
+
+/** 제품 카테고리 빠른 이동 (제품리스트 필터·푸터 등) */
+export const productCategoryNav: GnbItem[] = productCatalog.categories.map((category) => ({
   id: category.categoryId,
   label: category.categoryName,
   href: buildProductListUrl({ category: category.categoryId }),
 }));
 
-/** @deprecated gnbItems 사용 */
-export const categoryMenuItems = gnbItems;
+/** @deprecated categoryMenuItems → productCategoryNav */
+export const categoryMenuItems = productCategoryNav;
 
 /** @deprecated medicalProducts 사용 */
 export const themes = [] as const;
@@ -244,52 +254,15 @@ export const reviews = [
   },
 ];
 
-export const news = [
-  {
-    title: "2026 상반기 피부·미용 레이저 장비 트렌드, GentleMax·Pico 계열 수요 급증",
-    source: "메디컬타임즈",
-    date: "2026. 02. 03",
-    image: "/images/products/gentlemax-pro-plus.png",
-    href: "#",
-  },
-  {
-    title: "Alpexmedi, 클리닉 맞춤형 리프팅 장비 패키지 견적 서비스 확대",
-    source: "헬스케어뉴스",
-    date: "2026. 01. 05",
-    image: "/images/products/liftera2.png",
-    href: "#",
-  },
-  {
-    title: "초음파·냉각 복합 관리 장비, 2025년 도입 순위 TOP 10 발표",
-    source: "메디칼디바이스",
-    date: "2025. 11. 05",
-    image: "/images/products/coolsoniq.png",
-    href: "#",
-  },
-  {
-    title: "AI 기반 장비 스펙 비교 기능 업데이트…견적 요청 30% 단축",
-    source: "디지털헬스",
-    date: "2025. 08. 21",
-    image: "/images/products/cellvibe.png",
-    href: "#",
-  },
-];
-
-export const siteNotices = [
-  {
-    title: "[공지] Alpexmedi 견적·상담 시스템 업데이트 안내",
-    date: "2026.06.02",
-    href: "#",
-  },
-];
+export { boardFaqItems, news, siteNotices } from "./boardData";
 
 export const footerBanner = {
   title: "의료장비 구매·견적, Alpexmedi",
   subtitle: "병원·클리닉 맞춤 의료장비 플랫폼",
   logo: "/images/alpexmedi-logo.png",
   visual: "/images/products/coolsoniq.png",
-  primaryCta: { label: "견적 요청", href: "#" },
-  secondaryCta: { label: "카탈로그 보기", href: "#" },
+  primaryCta: { label: "견적 요청", href: "/quote/request" },
+  secondaryCta: { label: "제품리스트", href: "/products" },
 };
 
 export const companyInfo = {

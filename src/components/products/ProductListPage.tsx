@@ -14,18 +14,22 @@ import {
   type ProductListSort,
 } from "@/lib/productListUrl";
 import {
-  allProducts,
   filterProductList,
-  getCategoryById,
-  productCatalog,
   shortLabel,
   sortProducts,
   type FlatProduct,
+  type ProductCatalog,
 } from "@/data/productCatalog";
+import { usePublicCatalog } from "@/hooks/usePublicCatalog";
 
 const MOBILE_FILTER_MQ = "(max-width: 767px)";
 
+function getCategoryById(catalog: ProductCatalog, categoryId: string) {
+  return catalog.categories.find((category) => category.categoryId === categoryId);
+}
+
 export default function ProductListPage() {
+  const { catalog: productCatalog, products: allProducts } = usePublicCatalog();
   const router = useRouter();
   const searchParams = useSearchParams();
   const [filterOpen, setFilterOpen] = useState(false);
@@ -41,7 +45,9 @@ export default function ProductListPage() {
     [router],
   );
 
-  const selectedCategory = params.category ? getCategoryById(params.category) : undefined;
+  const selectedCategory = params.category
+    ? getCategoryById(productCatalog, params.category)
+    : undefined;
 
   const filteredProducts = useMemo(() => {
     const list = filterProductList(allProducts, {

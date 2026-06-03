@@ -1,29 +1,31 @@
 import Image from "next/image";
 import styles from "@/app/chutcha.module.css";
 import { heroBanner } from "@/data/homeData";
+import type { CmsHero } from "@/types/cms";
 import HeroSearchBar from "./HeroSearchBar";
 
 type HeroSectionProps = {
   children: React.ReactNode;
+  hero?: CmsHero;
 };
 
-export default function HeroSection({ children }: HeroSectionProps) {
+export default function HeroSection({ children, hero = heroBanner }: HeroSectionProps) {
   return (
     <>
       <div className={styles.kv}>
         <div className={styles.kvBanner}>
           <Image
-            src={heroBanner.image}
-            alt={`${heroBanner.headline} - ${heroBanner.subline} ${heroBanner.brandTag}`}
+            src={hero.image}
+            alt={`${hero.headline} - ${hero.subline} ${hero.brandTag}`}
             fill
             priority
             sizes="100vw"
             className={styles.kvBannerImg}
           />
           <div className={styles.kvSrOnly}>
-            <p>{heroBanner.headline}</p>
+            <p>{hero.headline}</p>
             <p>
-              {heroBanner.subline} {heroBanner.brandTag}
+              {hero.subline} {hero.brandTag}
             </p>
           </div>
         </div>

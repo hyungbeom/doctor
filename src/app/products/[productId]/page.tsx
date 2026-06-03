@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import ProductDetailPage from "@/components/products/ProductDetailPage";
-import { getProductById } from "@/data/productCatalog";
+import { getCmsProductById } from "@/lib/cms/resolveCatalog";
 
 type ProductDetailRouteProps = {
   params: Promise<{ productId: string }>;
@@ -8,7 +8,7 @@ type ProductDetailRouteProps = {
 
 export async function generateMetadata({ params }: ProductDetailRouteProps) {
   const { productId } = await params;
-  const product = getProductById(decodeURIComponent(productId));
+  const product = await getCmsProductById(decodeURIComponent(productId));
 
   if (!product) {
     return { title: "제품을 찾을 수 없습니다 | Alpexmedi" };
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: ProductDetailRouteProps) {
 
 export default async function ProductDetailRoute({ params }: ProductDetailRouteProps) {
   const { productId } = await params;
-  const product = getProductById(decodeURIComponent(productId));
+  const product = await getCmsProductById(decodeURIComponent(productId));
 
   if (!product) {
     notFound();
