@@ -93,6 +93,11 @@ function normalizeProductKey(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9가-힣]/g, "");
 }
 
+function englishNameFromCatalogLabel(productName: string): string {
+  const match = productName.match(/\(([^)]+)\)/);
+  return match?.[1]?.trim() ?? productName;
+}
+
 export function findCatalogProductByDisplayName(displayName: string): FlatProduct | undefined {
   const key = normalizeProductKey(displayName);
   if (!key) {
@@ -100,8 +105,10 @@ export function findCatalogProductByDisplayName(displayName: string): FlatProduc
   }
 
   return allProducts.find((product) => {
+    const englishLabel = englishNameFromCatalogLabel(product.productName);
     const candidates = [
       normalizeProductKey(product.productName),
+      normalizeProductKey(englishLabel),
       normalizeProductKey(shortLabel(product.brandName)),
       ...product.searchKeywords.map(normalizeProductKey),
     ];

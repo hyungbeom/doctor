@@ -1,10 +1,12 @@
 import type { MedicalProduct } from "@/data/homeData";
+import { homeProductCatalogIds } from "@/data/homeProductCatalogMap";
 import { findCatalogProductByDisplayName } from "@/data/productCatalog";
 import { buildProductDetailUrl, buildProductListUrl } from "@/lib/productListUrl";
 
 export function getMedicalProductHref(product: MedicalProduct): string {
-  if (product.catalogProductId) {
-    return buildProductDetailUrl(product.catalogProductId);
+  const mappedId = product.catalogProductId ?? homeProductCatalogIds[product.id];
+  if (mappedId) {
+    return buildProductDetailUrl(mappedId);
   }
 
   const matched = findCatalogProductByDisplayName(product.name);

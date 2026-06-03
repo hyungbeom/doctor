@@ -80,28 +80,31 @@ export const medicalProducts: MedicalProduct[] = [
     name: "PLAZION",
     description: "4th Generation Portable Plasma Innovated Across Generations",
     image: "/images/products/plazion.png",
-    href: "#",
+    href: "/products/P102-010",
+    catalogProductId: "P102-010",
   },
   {
     id: "coolsoniq",
     name: "CoolSoniq",
     description: "Perfect Harmony of Ultrasound Energy and Cooling Technology",
     image: "/images/products/coolsoniq.png",
-    href: "#",
+    href: "/products/P201-001",
+    catalogProductId: "P201-001",
   },
   {
     id: "coolfase",
     name: "COOLFASE",
     description: "Monopolar RF with Patented Cooling System",
     image: "/images/products/coolfase.png",
-    href: "#",
+    href: "/products/P202-005",
+    catalogProductId: "P202-005",
   },
   {
     id: "liftera2",
     name: "LIFTERA 2",
     description: "Next-Generation Lifting Solution, More Precise and Powerful",
     image: "/images/products/liftera2.png",
-    href: "#",
+    href: "/products/P201-011",
     catalogProductId: "P201-011",
   },
   {
@@ -109,14 +112,15 @@ export const medicalProducts: MedicalProduct[] = [
     name: "ULTLINE",
     description: "Ideal Body Line Completed with Ultrasonic Line Therapy",
     image: "/images/products/ultline.png",
-    href: "#",
+    href: "/products/P201-009",
+    catalogProductId: "P201-009",
   },
   {
     id: "gentlemax-pro-plus",
     name: "GentleMax Pro Plus",
     description: "Global Dual-Wavelength Laser System",
     image: "/images/products/gentlemax-pro-plus.png",
-    href: "#",
+    href: "/products/P103-002",
     catalogProductId: "P103-002",
   },
   {
@@ -124,14 +128,16 @@ export const medicalProducts: MedicalProduct[] = [
     name: "CELLVIBE",
     description: "Elasticity and Lifting Simultaneously with RF and EMS",
     image: "/images/products/cellvibe.png",
-    href: "#",
+    href: "/products/P203-007",
+    catalogProductId: "P203-007",
   },
   {
     id: "winnage",
     name: "WINNAGE",
     description: "Differentiated Anti-Aging Total Solution",
     image: "/images/products/winnage.png",
-    href: "#",
+    href: "/products/P203-006",
+    catalogProductId: "P203-006",
   },
 ];
 
@@ -141,14 +147,15 @@ export const monthlyPickProducts: MedicalProduct[] = [
     name: "COOLFASE",
     description: "Monopolar RF with Patented Cooling System",
     image: "/images/products/coolfase.png",
-    href: "#",
+    href: "/products/P202-005",
+    catalogProductId: "P202-005",
   },
   {
     id: "liftera2",
     name: "LIFTERA 2",
     description: "Next-Generation Lifting Solution, More Precise and Powerful",
     image: "/images/products/liftera2.png",
-    href: "#",
+    href: "/products/P201-011",
     catalogProductId: "P201-011",
   },
   {
@@ -156,7 +163,7 @@ export const monthlyPickProducts: MedicalProduct[] = [
     name: "GentleMax Pro Plus",
     description: "Global Dual-Wavelength Laser System",
     image: "/images/products/gentlemax-pro-plus.png",
-    href: "#",
+    href: "/products/P103-002",
     catalogProductId: "P103-002",
   },
   {
@@ -164,7 +171,8 @@ export const monthlyPickProducts: MedicalProduct[] = [
     name: "PLAZION",
     description: "4th Generation Portable Plasma Innovated Across Generations",
     image: "/images/products/plazion.png",
-    href: "#",
+    href: "/products/P102-010",
+    catalogProductId: "P102-010",
   },
 ];
 
@@ -279,7 +287,7 @@ export const companyInfo = {
 };
 
 export const weeklySideBanner = {
-  href: "#",
+  href: "/products/P103-002",
   hotLabel: "HOT10",
   ctaLabel: "지금 확인하기",
   image: "/images/products/gentlemax-pro-plus.png",

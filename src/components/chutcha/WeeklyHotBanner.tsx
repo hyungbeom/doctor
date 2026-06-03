@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "@/app/chutcha.module.css";
 import { weeklySideBanner } from "@/data/homeData";
 
@@ -6,7 +7,7 @@ const WEEKLY_LETTERS = "WEEKLY".split("");
 
 export default function WeeklyHotBanner() {
   return (
-    <a href={weeklySideBanner.href} className={styles.weeklyBanner}>
+    <Link href={weeklySideBanner.href} className={styles.weeklyBanner}>
       <div className={styles.weeklyBannerContent}>
         <div className={styles.weeklyFlip} aria-hidden>
           {WEEKLY_LETTERS.map((letter, index) => (
@@ -28,6 +29,6 @@ export default function WeeklyHotBanner() {
         />
         <div className={styles.weeklyVisualGlow} aria-hidden />
       </div>
-    </a>
+    </Link>
   );
 }
