@@ -1,0 +1,248 @@
+.guideWrap {
+  margin-top: 8px;
+}
+
+.stepStrip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.stepItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fffdf8 0%, var(--white) 100%);
+}
+
+.stepNum {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 28px;
+  text-align: center;
+}
+
+.stepText strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.stepText span {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--gray-60);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: 0 4px 20px rgba(24, 24, 24, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(24, 24, 24, 0.08);
+  border-color: #d0d4e8;
+}
+
+.cardQuote {
+  border-top: 3px solid var(--primary);
+}
+
+.cardDemo {
+  border-top: 3px solid #00a3ad;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.cardQuote .cardIcon {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.cardDemo .cardIcon {
+  background: #e6f7f8;
+  color: #007a8a;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.cardText {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--gray-60);
+  letter-spacing: -0.01em;
+}
+
+.cardList {
+  margin: 0 0 20px;
+  padding: 0 0 0 18px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--gray-80);
+}
+
+.cardList li {
+  margin-bottom: 6px;
+}
+
+.cardList li:last-child {
+  margin-bottom: 0;
+}
+
+.cardActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.btnPrimary,
+.btnOutline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.btnPrimary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btnPrimary:hover {
+  opacity: 0.9;
+}
+
+.btnOutline {
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: var(--white);
+}
+
+.btnOutline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.helpBox {
+  margin-top: 28px;
+  padding: 20px 22px;
+  border-radius: 12px;
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+}
+
+.helpBox p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--gray-60);
+}
+
+.helpBox a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.helpBox a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .stepStrip {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .stepItem {
+    padding: 14px 12px;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .card {
+    padding: 20px 18px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .cardActions {
+    flex-direction: column;
+  }
+
+  .btnPrimary,
+  .btnOutline {
+    width: 100%;
+  }
+
+  .helpBox {
+    margin-top: 20px;
+    padding: 16px;
+  }
+}
