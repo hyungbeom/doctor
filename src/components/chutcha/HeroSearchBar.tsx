@@ -301,10 +301,12 @@ export default function HeroSearchBar() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={`${IMG}/files/website/chutcha_pc/common/icon/ic_search_line_white.svg`}
-            alt="검색"
+            alt=""
             width={26}
             height={26}
+            aria-hidden
           />
+          <span className={styles.searchSubmitText}>검색</span>
         </button>
       </div>
 

@@ -18,6 +18,8 @@ export default function AdminContentPage() {
       hero: {
         headline: String(fd.get("headline")),
         subline: String(fd.get("subline")),
+        subline2: String(fd.get("subline2")),
+        englishLine: String(fd.get("englishLine")),
         brandTag: String(fd.get("brandTag")),
         image: String(fd.get("image")),
       },
@@ -63,8 +65,16 @@ export default function AdminContentPage() {
             <input name="headline" className={styles.input} defaultValue={store.hero.headline} />
           </div>
           <div>
-            <label className={styles.label}>서브라인</label>
+            <label className={styles.label}>서브라인 1</label>
             <input name="subline" className={styles.input} defaultValue={store.hero.subline} />
+          </div>
+          <div>
+            <label className={styles.label}>서브라인 2</label>
+            <input name="subline2" className={styles.input} defaultValue={store.hero.subline2 ?? ""} />
+          </div>
+          <div>
+            <label className={styles.label}>영문 안내</label>
+            <input name="englishLine" className={styles.input} defaultValue={store.hero.englishLine ?? ""} />
           </div>
           <div>
             <label className={styles.label}>브랜드 태그</label>

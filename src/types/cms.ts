@@ -12,6 +12,8 @@ export type CmsGnbItem = {
 export type CmsHero = {
   headline: string;
   subline: string;
+  subline2?: string;
+  englishLine?: string;
   brandTag: string;
   image: string;
 };

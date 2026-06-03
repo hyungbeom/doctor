@@ -51,30 +51,45 @@ export default function SalesGuideCarousel() {
       </div>
 
       <div ref={trackRef} className={styles.guideTrack}>
-        {salesGuideCards.map((card) => (
-          <a key={card.id} href={card.href} className={styles.guideCard}>
-            <h3 className={styles.guideCardTitle}>{card.title}</h3>
-            <div className={styles.guideCardTags}>
-              {card.tags.map((tag) => (
-                <span
-                  key={tag.text}
-                  className={`${styles.guideCardTag} ${tagToneClass[tag.tone]}`}
-                >
-                  {tag.text}
-                </span>
-              ))}
-            </div>
-            <div className={styles.guideCardVisual}>
+        {salesGuideCards.map((card) =>
+          card.layout === "banner" ? (
+            <a key={card.id} href={card.href} className={styles.guideCardBanner}>
               <Image
-                src={card.image}
-                alt=""
-                fill
-                sizes="140px"
-                className={styles.guideCardImg}
+                src={card.bannerImage}
+                alt={card.title}
+                width={744}
+                height={1024}
+                unoptimized
+                sizes="(min-width: 1200px) 272px, 78vw"
+                className={styles.guideCardBannerImg}
+                priority
               />
-            </div>
-          </a>
-        ))}
+            </a>
+          ) : (
+            <a key={card.id} href={card.href} className={styles.guideCard}>
+              <h3 className={styles.guideCardTitle}>{card.title}</h3>
+              <div className={styles.guideCardTags}>
+                {card.tags.map((tag) => (
+                  <span
+                    key={tag.text}
+                    className={`${styles.guideCardTag} ${tagToneClass[tag.tone]}`}
+                  >
+                    {tag.text}
+                  </span>
+                ))}
+              </div>
+              <div className={styles.guideCardVisual}>
+                <Image
+                  src={card.image}
+                  alt=""
+                  fill
+                  sizes="140px"
+                  className={styles.guideCardImg}
+                />
+              </div>
+            </a>
+          ),
+        )}
       </div>
     </section>
   );

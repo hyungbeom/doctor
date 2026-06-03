@@ -15,7 +15,12 @@ function mergeStoreWithDefaults(parsed: Partial<CmsStore>): CmsStore {
   return {
     ...defaults,
     ...parsed,
-    hero: { ...defaults.hero, ...parsed.hero },
+    hero: {
+      ...defaults.hero,
+      ...parsed.hero,
+      subline2: parsed.hero?.subline2 ?? defaults.hero.subline2,
+      englishLine: parsed.hero?.englishLine ?? defaults.hero.englishLine,
+    },
     gnb: parsed.gnb ?? defaults.gnb,
     productCatalog: parsed.productCatalog ?? defaults.productCatalog,
     boardPosts: parsed.boardPosts ?? defaults.boardPosts,

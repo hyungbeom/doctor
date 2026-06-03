@@ -15,13 +15,19 @@ export const keywords = [
   { label: "INDIBA", href: "#" },
   { label: "Ulthera", href: "#" },
   { label: "피코슈어", href: "#" },
+  { label: "써마지", href: "#" },
+  { label: "쿨스컬프팅", href: "#" },
+  { label: "HIFU", href: "#" },
 ];
 
 export const heroBanner = {
-  headline: "의료장비 몰라도 잘샀다",
-  subline: "누구나 잘 사는 의료장비.",
+  headline: "비교하고, 데모하고, 확신으로 도입하세요.",
+  subline: "부담 없는 데모 신청과 맞춤형 견적",
+  subline2: "피부과 의료기기 플랫폼의 새로운 기준",
+  englishLine:
+    "Find the perfect fit for your clinic. Risk-free device adoption starts with Alpexmedi.",
   brandTag: "Alpexmedi",
-  image: "/images/hero-banner.png",
+  image: "/images/hero-bg-water.png",
 };
 
 export const heroSearchSteps = [
@@ -178,16 +184,30 @@ export const monthlyPickProducts: MedicalProduct[] = [
 
 export type SalesGuideTagTone = "blue" | "purple" | "orange" | "green";
 
-export const salesGuideCards = [
+export type SalesGuideCard =
+  | {
+      id: string;
+      href: string;
+      layout: "banner";
+      title: string;
+      bannerImage: string;
+    }
+  | {
+      id: string;
+      href: string;
+      layout?: "card";
+      title: string;
+      tags: { text: string; tone: SalesGuideTagTone }[];
+      image: string;
+    };
+
+export const salesGuideCards: SalesGuideCard[] = [
   {
     id: "laser-lease",
-    title: "초기 부담 없이\n레이저 장비 도입",
-    tags: [
-      { text: "빠른납품·맞춤구성", tone: "blue" as SalesGuideTagTone },
-      { text: "렌탈·리스 가능", tone: "blue" as SalesGuideTagTone },
-    ],
-    image: "/images/products/gentlemax-pro-plus.png",
-    href: "#",
+    layout: "banner",
+    title: "초기 부담 없이 레이저 장비 도입",
+    bannerImage: "/images/sales-guide-laser-banner-v2.png",
+    href: "/guide",
   },
   {
     id: "compare-quote",

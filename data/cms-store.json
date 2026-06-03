@@ -2,10 +2,12 @@
   "version": 1,
   "updatedAt": "2026-06-03T07:49:49.089Z",
   "hero": {
-    "headline": "의료장비 몰라도 잘샀다",
-    "subline": "누구나 잘 사는 의료장비.",
+    "headline": "비교하고, 데모하고, 확신으로 도입하세요.",
+    "subline": "부담 없는 데모 신청과 맞춤형 견적",
+    "subline2": "피부과 의료기기 플랫폼의 새로운 기준",
+    "englishLine": "Find the perfect fit for your clinic. Risk-free device adoption starts with Alpexmedi.",
     "brandTag": "Alpexmedi",
-    "image": "/images/hero-banner.png"
+    "image": "/images/hero-bg-water.png"
   },
   "gnb": [
     {

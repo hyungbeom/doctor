@@ -36,6 +36,8 @@ export function buildDefaultCmsStore(): CmsStore {
     hero: {
       headline: heroBanner.headline,
       subline: heroBanner.subline,
+      subline2: heroBanner.subline2,
+      englishLine: heroBanner.englishLine,
       brandTag: heroBanner.brandTag,
       image: heroBanner.image,
     },

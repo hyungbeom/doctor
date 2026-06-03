@@ -37,7 +37,7 @@ export default async function Home() {
 
       <main>
         <HeroSection hero={hero}>
-          <ThemeSection title="추천 의료장비" products={medicalProducts} />
+          <ThemeSection title="추천 의료장비" products={medicalProducts} mobileMaxItems={5} />
 
           <SalesGuideCarousel />
 

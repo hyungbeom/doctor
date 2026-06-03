@@ -87,11 +87,27 @@ function EventPopupCard({
   );
 }
 
+const MOBILE_POPUP_MQ = "(max-width: 767px)";
+
 export default function PagePopups() {
   const [visible, setVisible] = useState<boolean[]>([]);
   const [ready, setReady] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const mq = window.matchMedia(MOBILE_POPUP_MQ);
+    const syncMobile = () => setIsMobile(mq.matches);
+    syncMobile();
+    mq.addEventListener("change", syncMobile);
+    return () => mq.removeEventListener("change", syncMobile);
+  }, []);
+
+  useEffect(() => {
+    if (window.matchMedia(MOBILE_POPUP_MQ).matches) {
+      setVisible(samplePopups.map(() => false));
+      setReady(true);
+      return;
+    }
     setVisible(samplePopups.map((popup) => !isPopupHidden(popup.storageKey)));
     setReady(true);
   }, []);
@@ -113,7 +129,7 @@ export default function PagePopups() {
     setVisible(samplePopups.map(() => false));
   };
 
-  if (!ready || !anyOpen) {
+  if (!ready || isMobile || !anyOpen) {
     return null;
   }
 

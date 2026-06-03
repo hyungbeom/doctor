@@ -23,7 +23,14 @@ export async function PUT(request: Request) {
     version: current.version,
     boardPosts: body.boardPosts ?? current.boardPosts,
     gnb: body.gnb ?? current.gnb,
-    hero: body.hero ? { ...current.hero, ...body.hero } : current.hero,
+    hero: body.hero
+      ? {
+          ...current.hero,
+          ...body.hero,
+          subline2: body.hero.subline2 ?? current.hero.subline2,
+          englishLine: body.hero.englishLine ?? current.hero.englishLine,
+        }
+      : current.hero,
     members: body.members ?? current.members,
     quotes: body.quotes ?? current.quotes,
     demos: body.demos ?? current.demos,

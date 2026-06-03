@@ -10,23 +10,32 @@ type HeroSectionProps = {
 };
 
 export default function HeroSection({ children, hero = heroBanner }: HeroSectionProps) {
+  const subline2 = hero.subline2 ?? "";
+  const englishLine = hero.englishLine ?? "";
+
   return (
     <>
       <div className={styles.kv}>
         <div className={styles.kvBanner}>
           <Image
             src={hero.image}
-            alt={`${hero.headline} - ${hero.subline} ${hero.brandTag}`}
+            alt=""
             fill
             priority
+            unoptimized
             sizes="100vw"
             className={styles.kvBannerImg}
+            aria-hidden
           />
-          <div className={styles.kvSrOnly}>
-            <p>{hero.headline}</p>
-            <p>
-              {hero.subline} {hero.brandTag}
-            </p>
+          <div className={styles.kvBannerContent}>
+            <div className={styles.kvBannerInner}>
+              <div className={styles.kvBannerText}>
+                <h1 className={styles.kvHeadline}>{hero.headline}</h1>
+                <p className={styles.kvSubline}>{hero.subline}</p>
+                {subline2 ? <p className={styles.kvSubline}>{subline2}</p> : null}
+                {englishLine ? <p className={styles.kvEnglish}>{englishLine}</p> : null}
+              </div>
+            </div>
           </div>
         </div>
       </div>
