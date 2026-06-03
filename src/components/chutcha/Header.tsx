@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import styles from "@/app/chutcha.module.css";
 import { gnbItems } from "@/data/homeData";
+import HeaderMemberNav from "./HeaderMemberNav";
 
 const TOP_BANNER_KEY = "topBannerDismissed";
 
@@ -20,6 +21,7 @@ export default function Header() {
   const overlayRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLElement>(null);
   const menuListRef = useRef<HTMLUListElement>(null);
+  const mobileMemberRef = useRef<HTMLDivElement>(null);
   const bar1Ref = useRef<HTMLSpanElement>(null);
   const bar2Ref = useRef<HTMLSpanElement>(null);
   const bar3Ref = useRef<HTMLSpanElement>(null);
@@ -46,6 +48,7 @@ export default function Header() {
     const nav = navRef.current;
     const list = menuListRef.current;
     const items = list ? Array.from(list.children) : [];
+    const memberBlock = mobileMemberRef.current;
 
     if (!overlay || !nav) {
       return;
@@ -57,11 +60,17 @@ export default function Header() {
       gsap.set(overlay, { display: "block", opacity: 0 });
       gsap.set(nav, { display: "flex", opacity: 0, y: -20 });
       gsap.set(items, { opacity: 0, x: -32 });
+      if (memberBlock) {
+        gsap.set(memberBlock, { opacity: 0, y: 16 });
+      }
 
       const tl = gsap.timeline();
       tl.to(overlay, { opacity: 1, duration: 0.35, ease: "power2.out" })
         .to(nav, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, "-=0.12")
         .to(items, { opacity: 1, x: 0, duration: 0.35, stagger: 0.07, ease: "power2.out" }, "-=0.22");
+      if (memberBlock) {
+        tl.to(memberBlock, { opacity: 1, y: 0, duration: 0.32, ease: "power2.out" }, "-=0.12");
+      }
 
       if (bar1Ref.current && bar2Ref.current && bar3Ref.current) {
         gsap.to(bar1Ref.current, { rotation: 45, y: 6, duration: 0.3, ease: "power2.inOut" });
@@ -79,7 +88,10 @@ export default function Header() {
       },
     });
 
-    tl.to(items, { opacity: 0, x: -24, duration: 0.2, stagger: 0.04, ease: "power2.in" })
+    if (memberBlock) {
+      tl.to(memberBlock, { opacity: 0, y: 10, duration: 0.18, ease: "power2.in" });
+    }
+    tl.to(items, { opacity: 0, x: -24, duration: 0.2, stagger: 0.04, ease: "power2.in" }, memberBlock ? "-=0.08" : 0)
       .to(nav, { opacity: 0, y: -12, duration: 0.28, ease: "power2.in" }, "-=0.04")
       .to(overlay, { opacity: 0, duration: 0.22, ease: "power2.in" }, "-=0.1");
 
@@ -149,6 +161,7 @@ export default function Header() {
           </nav>
 
           <div className={styles.headerRight}>
+            <HeaderMemberNav variant="desktop" />
             <button type="button" className={styles.recentBtn} title="최근 본 상품">
               <span className={styles.recentLabel}>최근 본 상품</span>
               <span className={styles.recentCount}>0</span>
@@ -181,6 +194,9 @@ export default function Header() {
               </li>
             ))}
           </ul>
+          <div ref={mobileMemberRef} className={styles.mobileMemberWrap}>
+            <HeaderMemberNav variant="mobile" onNavigate={closeMenu} />
+          </div>
         </nav>
       </header>
     </div>

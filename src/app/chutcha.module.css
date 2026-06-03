@@ -91,6 +91,61 @@
   align-items: center;
   flex-shrink: 0;
   margin-left: auto;
+  gap: 8px;
+}
+
+/* Member nav (desktop) */
+.memberNavDesktop {
+  display: none;
+  align-items: center;
+  gap: 2px;
+}
+
+.memberLink,
+.memberLinkBtn {
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  line-height: 1.35;
+  white-space: nowrap;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.memberLink:hover,
+.memberLink:focus-visible,
+.memberLinkBtn:hover,
+.memberLinkBtn:focus-visible {
+  color: var(--primary);
+  background: var(--bg-muted);
+  border-radius: 6px;
+}
+
+.memberLinkBtn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.memberDivider {
+  width: 1px;
+  height: 12px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.memberLinkMuted {
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--gray-40, #757579);
+  opacity: 0.5;
+}
+
+.mobileMemberWrap {
+  display: none;
 }
 
 .logoLink {
@@ -1767,10 +1822,22 @@
   color: #757579;
 }
 
+@media (min-width: 768px) {
+  .memberNavDesktop {
+    display: flex;
+  }
+}
+
 @media (max-width: 1199px) {
   .gnbItem a {
     padding: 6px 8px;
     font-size: 12px;
+  }
+
+  .memberLink,
+  .memberLinkBtn {
+    padding: 6px 8px;
+    font-size: 11px;
   }
 
   .topBannerInner {
@@ -1963,6 +2030,54 @@
     font-weight: 600;
     letter-spacing: -0.02em;
     color: var(--text);
+  }
+
+  .mobileMemberWrap {
+    display: block;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  .mobileMemberBlock {
+    width: 100%;
+  }
+
+  .mobileMemberLabel {
+    margin: 0 0 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gray-40, #757579);
+    letter-spacing: 0.04em;
+  }
+
+  .mobileMemberList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobileMemberList li {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mobileMemberLink {
+    display: block;
+    width: 100%;
+    padding: 14px 4px;
+    border: none;
+    background: transparent;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--text);
+    cursor: pointer;
+  }
+
+  .mobileMemberLink:hover,
+  .mobileMemberLink:focus-visible {
+    color: var(--primary);
   }
 
   .recentLabel {
