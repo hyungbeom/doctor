@@ -1,0 +1,102 @@
+.page {
+  min-height: 100vh;
+  background: var(--white);
+}
+
+.main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+.title {
+  margin: 0 0 12px;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+
+.desc {
+  margin: 0 0 24px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gray-40, #757579);
+}
+
+.notice {
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.inlineLink {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.primaryBtn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+}
+
+.secondaryBtn {
+  margin-top: 8px;
+  background: var(--white);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--gray-40, #757579);
+  text-decoration: underline;
+}
+
+.menuList {
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.menuList li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.menuList li:last-child {
+  border-bottom: none;
+}
+
+.menuLabel {
+  font-size: 14px;
+  color: var(--gray-40, #757579);
+}
+
+.menuValue {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
