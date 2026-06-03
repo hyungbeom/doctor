@@ -165,92 +165,80 @@ export default async function Home() {
         </section>
         <section className={styles.companyInfo}>
           <div className={styles.companyRow}>
-            <address style={{ fontStyle: "normal" }}>
+            <address className={styles.companyAddress} style={{ fontStyle: "normal" }}>
+              <p className={styles.companyName}>{companyInfo.name}</p>
               <ul className={styles.companyList}>
-                <li>{companyInfo.name}</li>
-                <li>{companyInfo.ceo}</li>
-                <li>{companyInfo.address}</li>
+                <li>주소 : {companyInfo.address}</li>
+                <li>
+                  이메일 :{" "}
+                  <a href={`mailto:${companyInfo.email}`} className={styles.companyLink}>
+                    {companyInfo.email}
+                  </a>
+                </li>
                 <li>대표전화 : {companyInfo.phone}</li>
               </ul>
-              <ul className={styles.companyList}>
-                <li>
-                  제휴문의 : <a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a>
-                </li>
-                <li>사업자 등록번호 : {companyInfo.businessNumber}</li>
-                <li>통신판매업 신고번호 : {companyInfo.salesNumber}</li>
-              </ul>
             </address>
-            <ul className={styles.linkGroup}>
-              <li>
-                <a href="#">서비스 이용약관</a>
-              </li>
-              <li>
-                <a href="#">개인정보 처리방침</a>
-              </li>
-              <li>
-                <a href="/quote/request" className={styles.linkBlue}>
-                  견적 요청
-                </a>
-              </li>
-              <li>
-                <a href="/resources">자료실</a>
-              </li>
-            </ul>
+            <div className={styles.footerAside}>
+              <a
+                href={`tel:${companyInfo.phone.replace(/-/g, "")}`}
+                className={styles.footerPhoneBtn}
+              >
+                <svg
+                  className={styles.footerPhoneIcon}
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden
+                >
+                  <path
+                    d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A15 15 0 015 6a2 2 0 012-2z"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                {companyInfo.phone}
+              </a>
+              <ul className={styles.sns}>
+                <li>
+                  <a href="#" title="인스타그램">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`${IMG}/files/website/chutcha_web/common/ic_ft_sns_insta.svg`}
+                      alt="Alpexmedi 인스타그램"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" title="유튜브">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`${IMG}/files/website/chutcha_web/common/ic_ft_sns_youtube.svg`}
+                      alt="Alpexmedi 유튜브"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className={styles.footerBottom}>
-            <ul className={styles.sns}>
-              <li>
-                <a href="#" title="인스타그램">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`${IMG}/files/website/chutcha_web/common/ic_ft_sns_insta.svg`}
-                    alt="첫차 인스타그램"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#" title="유튜브">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`${IMG}/files/website/chutcha_web/common/ic_ft_sns_youtube.svg`}
-                    alt="첫차 유튜브"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#" title="블로그">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`${IMG}/files/website/chutcha_web/common/ic_ft_sns_blog.svg`}
-                    alt="첫차 블로그"
-                  />
-                </a>
-              </li>
-            </ul>
-            <ul className={styles.certMarks}>
-              <li>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={`${IMG}/files/website/chutcha_pc/common/footer/img_download_mark_app.png`}
-                  alt="앱스토어 다운로드"
-                />
-              </li>
-              <li>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={`${IMG}/files/website/chutcha_pc/common/footer/img_certification_mark_hiseoul.png`}
-                  alt="서울산업진흥원"
-                />
-              </li>
-              <li>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={`${IMG}/files/website/chutcha_pc/common/footer/img_certification_mark_goodcontents.png`}
-                  alt="굿 콘텐츠 서비스"
-                />
-              </li>
-            </ul>
-          </div>
+          <ul className={styles.linkGroup}>
+            <li>
+              <a href="#">서비스 이용약관</a>
+            </li>
+            <li>
+              <a href="#">개인정보 처리방침</a>
+            </li>
+            <li>
+              <a href="/quote/request" className={styles.linkBlue}>
+                견적 요청
+              </a>
+            </li>
+            <li>
+              <a href="/resources">자료실</a>
+            </li>
+          </ul>
           <div className={styles.copyright}>
             <p>{companyInfo.disclaimer}</p>
             <p>{companyInfo.copyright}</p>

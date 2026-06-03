@@ -298,14 +298,11 @@ export const footerBanner = {
 };
 
 export const companyInfo = {
-  name: "(주)수메디칼",
-  ceo: "대표 : 수메디칼",
-  address: "서울특별시 (상세 주소)",
-  phone: "02-6952-9073",
-  email: "design@su-medical.co.kr",
-  businessNumber: "사업자 등록번호 확인 중",
-  salesNumber: "통신판매업 신고번호 확인 중",
-  copyright: "© Su Medical Corp. All rights reserved",
+  name: "alpexmedi",
+  address: "서울 강서구 마곡중앙6로 11 보타닉파크타워 3차 315-50",
+  phone: "070-8841-4143",
+  email: "almed3119@naver.com",
+  copyright: "© Alpexmedi. All rights reserved",
   disclaimer:
     "Alpexmedi는 의료장비 정보 및 견적 중개 서비스를 제공하며, 제품 거래에 관한 의무와 책임은 각 공급사 및 판매자에게 있습니다.",
 };
