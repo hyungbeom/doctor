@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
 import styles from "@/app/chutcha.module.css";
 import { salesGuideCards, type SalesGuideTagTone } from "@/data/homeData";
@@ -51,22 +51,13 @@ export default function SalesGuideCarousel() {
       </div>
 
       <div ref={trackRef} className={styles.guideTrack}>
-        {salesGuideCards.map((card) =>
-          card.layout === "banner" ? (
-            <a key={card.id} href={card.href} className={styles.guideCardBanner}>
-              <Image
-                src={card.bannerImage}
-                alt={card.title}
-                width={744}
-                height={1024}
-                unoptimized
-                sizes="(min-width: 1200px) 272px, 78vw"
-                className={styles.guideCardBannerImg}
-                priority
-              />
-            </a>
-          ) : (
-            <a key={card.id} href={card.href} className={styles.guideCard}>
+        {salesGuideCards.map((card) => (
+          <article
+            key={card.id}
+            className={styles.guideCard}
+            style={{ backgroundImage: `url(${card.backgroundImage})` }}
+          >
+            <div className={styles.guideCardTop}>
               <h3 className={styles.guideCardTitle}>{card.title}</h3>
               <div className={styles.guideCardTags}>
                 {card.tags.map((tag) => (
@@ -78,18 +69,15 @@ export default function SalesGuideCarousel() {
                   </span>
                 ))}
               </div>
-              <div className={styles.guideCardVisual}>
-                <Image
-                  src={card.image}
-                  alt=""
-                  fill
-                  sizes="140px"
-                  className={styles.guideCardImg}
-                />
-              </div>
-            </a>
-          ),
-        )}
+            </div>
+            <div className={styles.guideCardFooter}>
+              <p className={styles.guideCardDesc}>{card.description}</p>
+              <Link href={card.inquiryHref} className={styles.guideCardBtn}>
+                문의하기 →
+              </Link>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );

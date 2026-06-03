@@ -266,6 +266,14 @@
 }
 
 /* KV */
+.heroStack {
+  display: contents;
+}
+
+.heroContentPanel {
+  display: contents;
+}
+
 .kv {
   position: relative;
   width: 100%;
@@ -276,13 +284,13 @@
 .kvBanner {
   position: relative;
   width: 100%;
-  aspect-ratio: 1024 / 185;
+  aspect-ratio: 1024 / 220;
   min-height: 160px;
 }
 
 .kvBannerImg {
   object-fit: cover;
-  object-position: center center;
+  object-position: left center;
 }
 
 .kvBannerContent {
@@ -311,8 +319,7 @@
 
 .kvBannerText {
   max-width: 640px;
-  color: #fff;
-  text-shadow: 0 1px 12px rgba(15, 70, 95, 0.35);
+  color: #4a4a52;
 }
 
 .kvHeadline {
@@ -321,6 +328,7 @@
   font-weight: 700;
   line-height: 1.35;
   letter-spacing: -0.03em;
+  color: #3a3a42;
 }
 
 .kvSubline {
@@ -329,6 +337,7 @@
   font-weight: 500;
   line-height: 1.55;
   letter-spacing: -0.01em;
+  color: #52525c;
 }
 
 .kvSubline + .kvSubline {
@@ -341,7 +350,7 @@
   font-weight: 400;
   line-height: 1.6;
   letter-spacing: 0;
-  opacity: 0.92;
+  color: #5c5c66;
 }
 
 /* Floating ads — wide desktop only */
@@ -1161,31 +1170,24 @@
   display: none;
 }
 
-.guideCard,
-.guideCardBanner {
+.guideCard {
   position: relative;
+  display: flex;
+  flex-direction: column;
   flex: 0 0 calc((100% - 48px) / 4);
   min-width: 240px;
   max-width: 272px;
+  min-height: 280px;
+  padding: 24px 20px 20px;
   border-radius: 16px;
-  text-decoration: none;
+  background-color: #f5f5f6;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: inherit;
   overflow: hidden;
   scroll-snap-align: start;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.guideCard {
-  min-height: 320px;
-  padding: 24px 20px 120px;
-  background: #f5f5f6;
-}
-
-.guideCardBanner {
-  display: block;
-  padding: 0;
-  min-height: 0;
-  background: transparent;
 }
 
 .guideCard:hover {
@@ -1193,15 +1195,48 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-.guideCardBanner:hover {
-  transform: translateY(-2px);
+.guideCardTop {
+  flex-shrink: 0;
 }
 
-.guideCardBannerImg {
-  display: block;
-  width: 100%;
-  height: auto;
-  vertical-align: top;
+.guideCardFooter {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.guideCardDesc {
+  margin: 0 0 14px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: -0.02em;
+  color: #3a3a42;
+  white-space: pre-line;
+  text-shadow: 0 1px 6px rgba(255, 255, 255, 0.9);
+}
+
+.guideCardBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(8px);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #1a1a1e;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.guideCardBtn:hover {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .guideCardTitle {
@@ -1211,6 +1246,8 @@
   line-height: 1.35;
   letter-spacing: -0.03em;
   white-space: pre-line;
+  color: #1a1a1e;
+  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.85);
 }
 
 .guideCardTags {
@@ -1218,7 +1255,6 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
-  max-width: 62%;
 }
 
 .guideCardTag {
@@ -1229,6 +1265,7 @@
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: -0.02em;
+  backdrop-filter: blur(2px);
 }
 
 .guideCardTagBlue {
@@ -1249,21 +1286,6 @@
 .guideCardTagGreen {
   background: #dff5ea;
   color: #1a9d5c;
-}
-
-.guideCardVisual {
-  position: absolute;
-  right: -8px;
-  bottom: 0;
-  width: 148px;
-  height: 148px;
-  pointer-events: none;
-}
-
-.guideCardImg {
-  object-fit: contain;
-  object-position: right bottom;
-  padding: 8px;
 }
 
 .themeTabs {
@@ -1809,19 +1831,6 @@
   object-fit: contain;
 }
 
-.appVisual {
-  width: 280px;
-  height: 200px;
-  position: relative;
-  flex-shrink: 0;
-}
-
-.appVisualImg {
-  object-fit: contain;
-  object-position: right bottom;
-  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.22));
-}
-
 .companyInfo {
   max-width: 1136px;
   margin: 0 auto;
@@ -2005,8 +2014,7 @@
     gap: 36px 20px;
   }
 
-  .guideCard,
-  .guideCardBanner {
+  .guideCard {
     flex: 0 0 calc((100% - 16px) / 2);
     min-width: 220px;
   }
@@ -2026,13 +2034,6 @@
   .appBannerInner {
     flex-wrap: wrap;
     gap: 24px;
-  }
-
-  .appVisual {
-    order: 3;
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
   }
 
   .storeBtns {
@@ -2192,13 +2193,50 @@
     font-size: 13px;
   }
 
+  .heroStack {
+    display: block;
+    position: relative;
+  }
+
+  .heroStack::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: min(560px, 78vh);
+    z-index: 0;
+    pointer-events: none;
+    background-image: var(--hero-bg-image);
+    background-size: cover;
+    background-position: left top;
+    background-repeat: no-repeat;
+  }
+
+  .heroContentPanel {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-top: 4px;
+    padding-top: 12px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--white) 20px);
+  }
+
+  .kv {
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    background: transparent;
+  }
+
   .kvBanner {
-    aspect-ratio: 1024 / 220;
+    aspect-ratio: auto;
     min-height: 148px;
   }
 
   .kvBannerImg {
-    object-position: center center;
+    opacity: 0;
+    object-position: left top;
   }
 
   .kvBannerContent {
@@ -2231,8 +2269,10 @@
   }
 
   .carWrap {
+    position: relative;
+    z-index: 1;
     padding: 52px 0 0;
-    background: linear-gradient(180deg, var(--bg-muted) 0%, var(--white) 28%);
+    background: transparent;
   }
 
   .searchCard {
@@ -2369,7 +2409,7 @@
   }
 
   .productSection {
-    margin-top: 20px;
+    margin-top: 8px;
   }
 
   .section {
@@ -2461,29 +2501,33 @@
     margin-bottom: 16px;
   }
 
-  .guideCard,
-  .guideCardBanner {
+  .guideCard {
     flex: 0 0 78%;
     min-width: 0;
     max-width: none;
   }
 
   .guideCard {
-    min-height: 280px;
-    padding: 20px 16px 108px;
+    min-height: 260px;
+    padding: 20px 16px 18px;
+  }
+
+  .guideCardFooter {
+    padding-top: 16px;
+  }
+
+  .guideCardDesc {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+
+  .guideCardBtn {
+    padding: 8px 16px;
+    font-size: 12px;
   }
 
   .guideCardTitle {
     font-size: 18px;
-  }
-
-  .guideCardTags {
-    max-width: 68%;
-  }
-
-  .guideCardVisual {
-    width: 128px;
-    height: 128px;
   }
 
   .themePromo {
@@ -2609,10 +2653,6 @@
     width: 100%;
     justify-content: flex-start;
     flex-wrap: wrap;
-  }
-
-  .appVisual {
-    display: none;
   }
 
   .companyInfo {

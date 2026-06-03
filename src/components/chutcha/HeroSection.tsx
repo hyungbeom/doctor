@@ -13,8 +13,13 @@ export default function HeroSection({ children, hero = heroBanner }: HeroSection
   const subline2 = hero.subline2 ?? "";
   const englishLine = hero.englishLine ?? "";
 
+  const heroBgImage = `url(${hero.image})`;
+
   return (
-    <>
+    <div
+      className={styles.heroStack}
+      style={{ "--hero-bg-image": heroBgImage } as React.CSSProperties}
+    >
       <div className={styles.kv}>
         <div className={styles.kvBanner}>
           <Image
@@ -42,8 +47,8 @@ export default function HeroSection({ children, hero = heroBanner }: HeroSection
 
       <div className={styles.carWrap}>
         <HeroSearchBar />
-        {children}
+        <div className={styles.heroContentPanel}>{children}</div>
       </div>
-    </>
+    </div>
   );
 }

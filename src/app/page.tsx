@@ -161,15 +161,6 @@ export default async function Home() {
                 {footerBanner.secondaryCta.label}
               </a>
             </div>
-            <div className={styles.appVisual}>
-              <Image
-                src={footerBanner.visual}
-                alt=""
-                fill
-                sizes="280px"
-                className={styles.appVisualImg}
-              />
-            </div>
           </div>
         </section>
         <section className={styles.companyInfo}>

@@ -27,7 +27,7 @@ export const heroBanner = {
   englishLine:
     "Find the perfect fit for your clinic. Risk-free device adoption starts with Alpexmedi.",
   brandTag: "Alpexmedi",
-  image: "/images/hero-bg-water.png",
+  image: "/images/hero-bg-gold.png",
 };
 
 export const heroSearchSteps = [
@@ -184,70 +184,75 @@ export const monthlyPickProducts: MedicalProduct[] = [
 
 export type SalesGuideTagTone = "blue" | "purple" | "orange" | "green";
 
-export type SalesGuideCard =
-  | {
-      id: string;
-      href: string;
-      layout: "banner";
-      title: string;
-      bannerImage: string;
-    }
-  | {
-      id: string;
-      href: string;
-      layout?: "card";
-      title: string;
-      tags: { text: string; tone: SalesGuideTagTone }[];
-      image: string;
-    };
+export type SalesGuideCard = {
+  id: string;
+  title: string;
+  description: string;
+  backgroundImage: string;
+  inquiryHref: string;
+  tags: { text: string; tone: SalesGuideTagTone }[];
+};
 
 export const salesGuideCards: SalesGuideCard[] = [
   {
     id: "laser-lease",
-    layout: "banner",
-    title: "초기 부담 없이 레이저 장비 도입",
-    bannerImage: "/images/sales-guide-laser-banner-v2.png",
-    href: "/guide",
+    title: "초기 부담 없이\n레이저 장비 도입",
+    description:
+      "Alpexmedi는 병원 상황에 맞춰\n렌탈·리스·구매까지 진행할 수 있는 솔루션을 제공합니다.",
+    backgroundImage: "/images/sales-guide/card-bg-peach.png",
+    inquiryHref: "/guide",
+    tags: [
+      { text: "빠른납품·맞춤구성", tone: "blue" as SalesGuideTagTone },
+      { text: "렌탈·리스 가능", tone: "blue" as SalesGuideTagTone },
+    ],
   },
   {
     id: "compare-quote",
     title: "비교견적으로\n최대 20% 절감",
+    description:
+      "동일 스펙 장비 견적을 한눈에 비교해 드립니다.\n도입 예산을 최대 20%까지 절감해 보세요.",
+    backgroundImage: "/images/sales-guide/card-bg-blue.png",
+    inquiryHref: "/quote/request",
     tags: [
       { text: "전 모델 비교", tone: "purple" as SalesGuideTagTone },
       { text: "특별가 적용", tone: "purple" as SalesGuideTagTone },
     ],
-    image: "/images/products/coolsoniq.png",
-    href: "#",
   },
   {
     id: "nationwide-delivery",
     title: "전국 클리닉\n납품·설치 지원",
+    description:
+      "전국 어디든 납품·설치 일정을 맞춰 드립니다.\n개원·증설 규모에 맞는 구성을 제안합니다.",
+    backgroundImage: "/images/sales-guide/card-bg-pink.png",
+    inquiryHref: "/guide",
     tags: [
       { text: "언제 어디서나", tone: "orange" as SalesGuideTagTone },
       { text: "필요한 만큼만 간단하게", tone: "orange" as SalesGuideTagTone },
     ],
-    image: "/images/products/plazion.png",
-    href: "#",
   },
   {
     id: "maintenance-care",
     title: "A/S·소모품까지\n한 번에 관리",
+    description:
+      "정기 점검부터 소모품까지 한 번에 관리합니다.\n다운타임을 줄이는 유지보수 플랜을 받아보세요.",
+    backgroundImage: "/images/sales-guide/card-bg-mint.png",
+    inquiryHref: "/support",
     tags: [
       { text: "맞춤 유지보수", tone: "green" as SalesGuideTagTone },
       { text: "Alpexmedi Care", tone: "green" as SalesGuideTagTone },
     ],
-    image: "/images/products/coolfase.png",
-    href: "#",
   },
   {
     id: "demo-quote",
     title: "데모·견적\n무료 상담",
+    description:
+      "당일 견적 회신과 현장 데모를 지원합니다.\n도입 전 병원 환경에서 직접 테스트해 보세요.",
+    backgroundImage: "/images/sales-guide/card-bg-blue.png",
+    inquiryHref: "/guide",
     tags: [
       { text: "당일 견적 응답", tone: "blue" as SalesGuideTagTone },
       { text: "현장 데모 가능", tone: "blue" as SalesGuideTagTone },
     ],
-    image: "/images/products/liftera2.png",
-    href: "#",
   },
 ];
 
@@ -288,7 +293,6 @@ export const footerBanner = {
   title: "의료장비 구매·견적, Alpexmedi",
   subtitle: "병원·클리닉 맞춤 의료장비 플랫폼",
   logo: "/images/alpexmedi-logo.png",
-  visual: "/images/products/coolsoniq.png",
   primaryCta: { label: "견적 요청", href: "/quote/request" },
   secondaryCta: { label: "제품리스트", href: "/products" },
 };
