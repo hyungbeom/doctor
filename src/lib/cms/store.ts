@@ -5,6 +5,11 @@ import type { CmsStore } from "@/types/cms";
 
 const STORE_PATH = path.join(process.cwd(), "data", "cms-store.json");
 
+/** Vercel 등 서버리스에서는 프로젝트 디렉터리에 쓰기 불가(읽기 전용) */
+export function canPersistCmsStore(): boolean {
+  return process.env.VERCEL !== "1";
+}
+
 function mergeStoreWithDefaults(parsed: Partial<CmsStore>): CmsStore {
   const defaults = buildDefaultCmsStore();
   return {
@@ -27,20 +32,18 @@ export async function readCmsStore(): Promise<CmsStore> {
   try {
     const raw = await fs.readFile(STORE_PATH, "utf-8");
     const parsed = JSON.parse(raw) as Partial<CmsStore>;
-    if (!parsed.productCatalog) {
-      const merged = mergeStoreWithDefaults(parsed);
-      await writeCmsStore(merged);
-      return merged;
-    }
     return mergeStoreWithDefaults(parsed);
   } catch {
-    const defaults = buildDefaultCmsStore();
-    await writeCmsStore(defaults);
-    return defaults;
+    return buildDefaultCmsStore();
   }
 }
 
 export async function writeCmsStore(store: CmsStore): Promise<void> {
+  if (!canPersistCmsStore()) {
+    throw new Error(
+      "CMS 파일 저장은 로컬 개발 환경에서만 가능합니다. Vercel에서는 외부 스토리지(DB·Blob 등) 연동이 필요합니다.",
+    );
+  }
   await fs.mkdir(path.dirname(STORE_PATH), { recursive: true });
   const next: CmsStore = {
     ...store,
