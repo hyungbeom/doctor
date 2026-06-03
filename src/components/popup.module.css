@@ -1,0 +1,300 @@
+.popupRoot {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.popupDim {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.popupGroup {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.modal {
+  width: min(400px, calc(100vw - 32px));
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+}
+
+.modalBody {
+  position: relative;
+  min-height: 520px;
+  padding: 28px 24px 0;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.modalOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.72) 45%,
+    rgba(0, 0, 0, 0.88) 100%
+  );
+  pointer-events: none;
+}
+
+.modalInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 492px;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.modalLogo {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  max-width: 120px;
+}
+
+.modalBrand {
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.9;
+  text-align: right;
+  line-height: 1.35;
+}
+
+.modalTitle {
+  margin: 0 0 24px;
+  font-size: clamp(22px, 5vw, 28px);
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: center;
+  white-space: pre-line;
+  letter-spacing: -0.02em;
+}
+
+.modalMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.modalBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(120, 120, 120, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.modalDate {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.modalNote {
+  margin: 0 0 16px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.modalDivider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  margin: 0 0 20px;
+}
+
+.priceList {
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.priceRow {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.priceLabel {
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.priceDots {
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.45);
+  min-width: 20px;
+  height: 1px;
+}
+
+.priceValue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 118px;
+  padding: 7px 16px;
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.vatNote {
+  margin: 0 0 20px;
+  text-align: right;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.modalDesc {
+  margin: 0 0 auto;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.modalDesc p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.modalDesc p + p {
+  margin-top: 4px;
+}
+
+.modalCtaBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 -24px;
+  padding: 14px 20px;
+  background: rgba(0, 0, 0, 0.45);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.modalCtaBar:hover {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.modalFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+
+.hideCheck {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hideCheck input {
+  width: 16px;
+  height: 16px;
+  accent-color: #007bff;
+  cursor: pointer;
+}
+
+.confirmBtn {
+  min-width: 72px;
+  padding: 10px 22px;
+  border-radius: 4px;
+  background: #007bff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.confirmBtn:hover {
+  background: #0069d9;
+}
+
+@media (max-width: 767px) {
+  .popupGroup {
+    flex-direction: column;
+    align-items: center;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+  }
+
+  .modalBody {
+    min-height: 480px;
+  }
+
+  .priceValue {
+    min-width: 104px;
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 479px) {
+  .modalMeta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .priceRow {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .priceDots {
+    display: none;
+  }
+
+  .priceValue {
+    justify-self: start;
+  }
+}

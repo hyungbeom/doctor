@@ -1,0 +1,1718 @@
+{
+  "categories": [
+    {
+      "categoryId": "C100",
+      "categoryName": "레이저 및 광선 치료 장비 (Lasers & Light)",
+      "equipmentTypes": [
+        {
+          "typeId": "T101",
+          "typeName": "피코/나노초 색소 레이저 (Pico & Q-Switched Nd:YAG)",
+          "brands": [
+            {
+              "brandId": "B001",
+              "brandName": "루트로닉 (Lutronic)",
+              "products": [
+                {
+                  "productId": "P101-001",
+                  "productName": "피코플러스 (PicoPlus)",
+                  "searchKeywords": [
+                    "피코플러스",
+                    "picoplus",
+                    "루트로닉피코"
+                  ]
+                },
+                {
+                  "productId": "P101-002",
+                  "productName": "할리우드 스펙트라 (Hollywood Spectra)",
+                  "searchKeywords": [
+                    "할리우드스펙트라",
+                    "hollywood spectra",
+                    "스펙트라"
+                  ]
+                },
+                {
+                  "productId": "P101-003",
+                  "productName": "스펙트라 XT (Spectra XT)",
+                  "searchKeywords": [
+                    "스펙트라xt",
+                    "spectra xt"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B002",
+              "brandName": "원텍 (Wontech)",
+              "products": [
+                {
+                  "productId": "P101-004",
+                  "productName": "피코케어 (PicoCare)",
+                  "searchKeywords": [
+                    "피코케어",
+                    "picocare",
+                    "원텍피코"
+                  ]
+                },
+                {
+                  "productId": "P101-005",
+                  "productName": "피코케어 마제스티 (PicoCare Majesty)",
+                  "searchKeywords": [
+                    "피코케어마제스티",
+                    "majesty",
+                    "마제스티"
+                  ]
+                },
+                {
+                  "productId": "P101-006",
+                  "productName": "파스텔 (Pastelle)",
+                  "searchKeywords": [
+                    "파스텔",
+                    "pastelle"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B003",
+              "brandName": "칸델라 (Candela)",
+              "products": [
+                {
+                  "productId": "P101-007",
+                  "productName": "피코웨이 (PicoWay)",
+                  "searchKeywords": [
+                    "피코웨이",
+                    "picoway",
+                    "시네론칸델라"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B004",
+              "brandName": "사이노슈어 (Cynosure)",
+              "products": [
+                {
+                  "productId": "P101-008",
+                  "productName": "피코슈어 (PicoSure)",
+                  "searchKeywords": [
+                    "피코슈어",
+                    "picosure"
+                  ]
+                },
+                {
+                  "productId": "P101-009",
+                  "productName": "피코슈어 프로 (PicoSure Pro)",
+                  "searchKeywords": [
+                    "피코슈어프로",
+                    "picosure pro"
+                  ]
+                },
+                {
+                  "productId": "P101-010",
+                  "productName": "레블라이트 SI (RevLite SI)",
+                  "searchKeywords": [
+                    "레블라이트",
+                    "revlite",
+                    "레블라이트si"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B005",
+              "brandName": "알마 (Alma Lasers)",
+              "products": [
+                {
+                  "productId": "P101-011",
+                  "productName": "클리어리프트 (ClearLift)",
+                  "searchKeywords": [
+                    "클리어리프트",
+                    "clearlift"
+                  ]
+                },
+                {
+                  "productId": "P101-012",
+                  "productName": "하모니 XL 프로 (Harmony XL Pro)",
+                  "searchKeywords": [
+                    "하모니엑스엘",
+                    "harmonyxl"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B006",
+              "brandName": "포토나 (Fotona)",
+              "products": [
+                {
+                  "productId": "P101-013",
+                  "productName": "스타워커 (StarWalker)",
+                  "searchKeywords": [
+                    "스타워커",
+                    "starwalker",
+                    "포토나스타워커"
+                  ]
+                },
+                {
+                  "productId": "P101-014",
+                  "productName": "스타워커 MaQX (StarWalker MaQX)",
+                  "searchKeywords": [
+                    "스타워커마큐엑스",
+                    "maqx"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B007",
+              "brandName": "레이저옵텍 (Laseroptek)",
+              "products": [
+                {
+                  "productId": "P101-015",
+                  "productName": "피콜로 (Piccolo)",
+                  "searchKeywords": [
+                    "피콜로",
+                    "piccolo"
+                  ]
+                },
+                {
+                  "productId": "P101-016",
+                  "productName": "피콜로 프리미엄 (Piccolo Premium)",
+                  "searchKeywords": [
+                    "피콜로프리미엄",
+                    "piccolo premium"
+                  ]
+                },
+                {
+                  "productId": "P101-017",
+                  "productName": "헬리오스 III (Helios III)",
+                  "searchKeywords": [
+                    "헬리오스",
+                    "helios",
+                    "헬리오스3"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B008",
+              "brandName": "콴타 시스템 (Quanta System)",
+              "products": [
+                {
+                  "productId": "P101-018",
+                  "productName": "디스커버리 피코 (Discovery Pico)",
+                  "searchKeywords": [
+                    "디스커버리피코",
+                    "discovery pico"
+                  ]
+                },
+                {
+                  "productId": "P101-019",
+                  "productName": "디스커버리 피코 플러스 (Discovery Pico Plus)",
+                  "searchKeywords": [
+                    "디스커버리피코플러스",
+                    "discovery pico plus"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeId": "T102",
+          "typeName": "프락셔널 및 피부 재생 (Fractional, CO2, Er:YAG)",
+          "brands": [
+            {
+              "brandId": "B009",
+              "brandName": "솔타메디칼 (Solta Medical)",
+              "products": [
+                {
+                  "productId": "P102-001",
+                  "productName": "프락셀 듀얼 (Fraxel Dual)",
+                  "searchKeywords": [
+                    "프락셀",
+                    "fraxel",
+                    "프락셀듀얼"
+                  ]
+                },
+                {
+                  "productId": "P102-002",
+                  "productName": "프락셀 리페어 (Fraxel re:pair)",
+                  "searchKeywords": [
+                    "프락셀리페어",
+                    "fraxel repair"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B010",
+              "brandName": "루메니스 (Lumenis)",
+              "products": [
+                {
+                  "productId": "P102-003",
+                  "productName": "울트라펄스 앙코르 (UltraPulse Encore)",
+                  "searchKeywords": [
+                    "앙코르레이저",
+                    "ultrapulse",
+                    "앙코르"
+                  ]
+                },
+                {
+                  "productId": "P102-004",
+                  "productName": "아큐펄스 (AcuPulse)",
+                  "searchKeywords": [
+                    "아큐펄스",
+                    "acupulse"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B011",
+              "brandName": "사이톤 (Sciton)",
+              "products": [
+                {
+                  "productId": "P102-005",
+                  "productName": "헤일로 (Halo)",
+                  "searchKeywords": [
+                    "헤일로",
+                    "halo",
+                    "사이톤헤일로"
+                  ]
+                },
+                {
+                  "productId": "P102-006",
+                  "productName": "프로프락셀 (ProFractional)",
+                  "searchKeywords": [
+                    "프로프락셀",
+                    "profractional"
+                  ]
+                },
+                {
+                  "productId": "P102-007",
+                  "productName": "컨투어 TRL (Contour TRL)",
+                  "searchKeywords": [
+                    "컨투어trl",
+                    "contour trl"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B012",
+              "brandName": "에스엔제이 (SNJ)",
+              "products": [
+                {
+                  "productId": "P102-008",
+                  "productName": "파인셀 (Finexel)",
+                  "searchKeywords": [
+                    "파인셀",
+                    "finexel",
+                    "snj"
+                  ]
+                },
+                {
+                  "productId": "P102-009",
+                  "productName": "에지원 (Edge ONE)",
+                  "searchKeywords": [
+                    "에지원",
+                    "edgeone",
+                    "co2레이저"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B013",
+              "brandName": "아스클레피온 (Asclepion)",
+              "products": [
+                {
+                  "productId": "P102-010",
+                  "productName": "더마블레이트 (Dermablate)",
+                  "searchKeywords": [
+                    "더마블레이트",
+                    "dermablate",
+                    "어븀야그"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeId": "T103",
+          "typeName": "제모 및 혈관 치료 (Diode, Alexandrite, Long-pulsed Nd:YAG)",
+          "brands": [
+            {
+              "brandId": "B003",
+              "brandName": "칸델라 (Candela)",
+              "products": [
+                {
+                  "productId": "P103-001",
+                  "productName": "젠틀맥스 프로 (GentleMax Pro)",
+                  "searchKeywords": [
+                    "젠틀맥스",
+                    "gentlemax",
+                    "젠틀맥스프로"
+                  ]
+                },
+                {
+                  "productId": "P103-002",
+                  "productName": "젠틀맥스 프로 플러스 (GentleMax Pro Plus)",
+                  "searchKeywords": [
+                    "젠틀맥스프로플러스",
+                    "gentlemax pro plus"
+                  ]
+                },
+                {
+                  "productId": "P103-003",
+                  "productName": "브이빔 퍼펙타 (Vbeam Perfecta)",
+                  "searchKeywords": [
+                    "브이빔",
+                    "vbeam",
+                    "브이빔퍼펙타"
+                  ]
+                },
+                {
+                  "productId": "P103-004",
+                  "productName": "브이빔 프리마 (Vbeam Prima)",
+                  "searchKeywords": [
+                    "브이빔프리마",
+                    "vbeam prima"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B004",
+              "brandName": "사이노슈어 (Cynosure)",
+              "products": [
+                {
+                  "productId": "P103-005",
+                  "productName": "아포지 엘리트 플러스 (Apogee Elite Plus)",
+                  "searchKeywords": [
+                    "아포지",
+                    "apogee",
+                    "아포지엘리트"
+                  ]
+                },
+                {
+                  "productId": "P103-006",
+                  "productName": "엘리트 IQ (Elite IQ)",
+                  "searchKeywords": [
+                    "엘리트iq",
+                    "elite iq"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B014",
+              "brandName": "큐테라 (Cutera)",
+              "products": [
+                {
+                  "productId": "P103-007",
+                  "productName": "엑셀 브이 (Excel V)",
+                  "searchKeywords": [
+                    "엑셀브이",
+                    "excelv",
+                    "큐테라"
+                  ]
+                },
+                {
+                  "productId": "P103-008",
+                  "productName": "엑셀 브이 플러스 (Excel V Plus)",
+                  "searchKeywords": [
+                    "엑셀브이플러스",
+                    "excel v plus"
+                  ]
+                },
+                {
+                  "productId": "P103-009",
+                  "productName": "엑셀 HR (Excel HR)",
+                  "searchKeywords": [
+                    "엑셀hr",
+                    "excelhr"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B005",
+              "brandName": "알마 (Alma Lasers)",
+              "products": [
+                {
+                  "productId": "P103-010",
+                  "productName": "소프라노 티타늄 (Soprano Titanium)",
+                  "searchKeywords": [
+                    "티타늄리프팅",
+                    "소프라노티타늄",
+                    "티타늄레이저",
+                    "titanium"
+                  ]
+                },
+                {
+                  "productId": "P103-011",
+                  "productName": "소프라노 아이스 플래티넘 (Soprano Ice Platinum)",
+                  "searchKeywords": [
+                    "소프라노아이스",
+                    "soprano ice"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B015",
+              "brandName": "에어로레이즈 (Aerolase)",
+              "products": [
+                {
+                  "productId": "P103-012",
+                  "productName": "네오 엘리트 (Neo Elite)",
+                  "searchKeywords": [
+                    "네오엘리트",
+                    "aerolase",
+                    "neo elite"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B016",
+              "brandName": "이루다 (Ilooda)",
+              "products": [
+                {
+                  "productId": "P103-013",
+                  "productName": "브이레이저 (V-Laser)",
+                  "searchKeywords": [
+                    "브이레이저",
+                    "vlaser",
+                    "이루다"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeId": "T104",
+          "typeName": "IPL, BBL 및 LED 광선 기기",
+          "brands": [
+            {
+              "brandId": "B010",
+              "brandName": "루메니스 (Lumenis)",
+              "products": [
+                {
+                  "productId": "P104-001",
+                  "productName": "M22",
+                  "searchKeywords": [
+                    "m22",
+                    "루메니스m22"
+                  ]
+                },
+                {
+                  "productId": "P104-002",
+                  "productName": "스텔라 M22 (Stellar M22)",
+                  "searchKeywords": [
+                    "스텔라m22",
+                    "stellar m22"
+                  ]
+                },
+                {
+                  "productId": "P104-003",
+                  "productName": "옵티마 IPL (Optima IPL)",
+                  "searchKeywords": [
+                    "옵티마ipl",
+                    "optima ipl"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B011",
+              "brandName": "사이톤 (Sciton)",
+              "products": [
+                {
+                  "productId": "P104-004",
+                  "productName": "BBL 히어로 (BBL Hero)",
+                  "searchKeywords": [
+                    "bbl",
+                    "bbl히어로",
+                    "비비엘"
+                  ]
+                },
+                {
+                  "productId": "P104-005",
+                  "productName": "엠줄 BBL (mJoules BBL)",
+                  "searchKeywords": [
+                    "엠줄",
+                    "mjoules"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B017",
+              "brandName": "제이시스메디칼 (Jeisys)",
+              "products": [
+                {
+                  "productId": "P104-006",
+                  "productName": "셀렉 V (CelecV)",
+                  "searchKeywords": [
+                    "셀렉",
+                    "셀렉브이",
+                    "celec",
+                    "celecv"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B018",
+              "brandName": "오메가메디칼 (Omega)",
+              "products": [
+                {
+                  "productId": "P104-007",
+                  "productName": "오메가라이트 (Omega Light)",
+                  "searchKeywords": [
+                    "오메가라이트",
+                    "omegalight",
+                    "led램프"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B019",
+              "brandName": "힐라이트 (Healite)",
+              "products": [
+                {
+                  "productId": "P104-008",
+                  "productName": "힐라이트 II (Healite II)",
+                  "searchKeywords": [
+                    "힐라이트",
+                    "healite",
+                    "힐라이트2"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "C200",
+      "categoryName": "리프팅 및 타이트닝 장비 (EBD)",
+      "equipmentTypes": [
+        {
+          "typeId": "T201",
+          "typeName": "집속 초음파 리프팅 (HIFU & Ultrasound)",
+          "brands": [
+            {
+              "brandId": "B020",
+              "brandName": "멀츠 (Merz)",
+              "products": [
+                {
+                  "productId": "P201-001",
+                  "productName": "울쎄라 (Ultherapy)",
+                  "searchKeywords": [
+                    "울쎄라",
+                    "ulthera",
+                    "ultherapy",
+                    "멀츠"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B021",
+              "brandName": "클래시스 (Classys)",
+              "products": [
+                {
+                  "productId": "P201-002",
+                  "productName": "슈링크 (Shurink / Ultraformer III)",
+                  "searchKeywords": [
+                    "슈링크",
+                    "shurink",
+                    "울트라포머"
+                  ]
+                },
+                {
+                  "productId": "P201-003",
+                  "productName": "슈링크 유니버스 (Shurink Universe)",
+                  "searchKeywords": [
+                    "슈링크유니버스",
+                    "유니버스",
+                    "shurink universe"
+                  ]
+                },
+                {
+                  "productId": "P201-004",
+                  "productName": "볼뉴머 (Volnewmer)",
+                  "searchKeywords": [
+                    "볼뉴머",
+                    "volnewmer"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B022",
+              "brandName": "소프웨이브 (Sofwave)",
+              "products": [
+                {
+                  "productId": "P201-005",
+                  "productName": "소프웨이브 (Sofwave)",
+                  "searchKeywords": [
+                    "소프웨이브",
+                    "sofwave"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B023",
+              "brandName": "하이로닉 (Hironic)",
+              "products": [
+                {
+                  "productId": "P201-006",
+                  "productName": "더블로 골드 (Doublo Gold)",
+                  "searchKeywords": [
+                    "더블로",
+                    "더블로골드",
+                    "doublo"
+                  ]
+                },
+                {
+                  "productId": "P201-007",
+                  "productName": "브이로 (V-Ro)",
+                  "searchKeywords": [
+                    "브이로",
+                    "vro",
+                    "브이로리프팅"
+                  ]
+                },
+                {
+                  "productId": "P201-008",
+                  "productName": "뉴더블로 (New Doublo)",
+                  "searchKeywords": [
+                    "뉴더블로",
+                    "new doublo"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B017",
+              "brandName": "제이시스메디칼 (Jeisys)",
+              "products": [
+                {
+                  "productId": "P201-009",
+                  "productName": "리니어지 (LinearZ)",
+                  "searchKeywords": [
+                    "리니어지",
+                    "linearz",
+                    "리니어펌"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B024",
+              "brandName": "아스테라시스 (Asterasys)",
+              "products": [
+                {
+                  "productId": "P201-010",
+                  "productName": "리프테라 (Liftera)",
+                  "searchKeywords": [
+                    "리프테라",
+                    "liftera"
+                  ]
+                },
+                {
+                  "productId": "P201-011",
+                  "productName": "리프테라 2 (Liftera 2)",
+                  "searchKeywords": [
+                    "리프테라2",
+                    "liftera2"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeId": "T202",
+          "typeName": "단극성 고주파 (Monopolar RF)",
+          "brands": [
+            {
+              "brandId": "B009",
+              "brandName": "솔타메디칼 (Solta Medical)",
+              "products": [
+                {
+                  "productId": "P202-001",
+                  "productName": "써마지 FLX (Thermage FLX)",
+                  "searchKeywords": [
+                    "써마지",
+                    "써마지flx",
+                    "thermage",
+                    "flx"
+                  ]
+                },
+                {
+                  "productId": "P202-002",
+                  "productName": "써마지 CPT (Thermage CPT)",
+                  "searchKeywords": [
+                    "써마지cpt",
+                    "thermage cpt"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B002",
+              "brandName": "원텍 (Wontech)",
+              "products": [
+                {
+                  "productId": "P202-003",
+                  "productName": "올리지오 (Oligio)",
+                  "searchKeywords": [
+                    "올리지오",
+                    "oligio",
+                    "원텍고주파"
+                  ]
+                },
+                {
+                  "productId": "P202-004",
+                  "productName": "올리지오 X (Oligio X)",
+                  "searchKeywords": [
+                    "올리지오엑스",
+                    "oligio x"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B017",
+              "brandName": "제이시스메디칼 (Jeisys)",
+              "products": [
+                {
+                  "productId": "P202-005",
+                  "productName": "덴서티 (Density)",
+                  "searchKeywords": [
+                    "덴서티",
+                    "density",
+                    "덴서티하이"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B025",
+              "brandName": "쉬엔비 (Shenb)",
+              "products": [
+                {
+                  "productId": "P202-006",
+                  "productName": "텐써마 (10Therma)",
+                  "searchKeywords": [
+                    "텐써마",
+                    "10therma",
+                    "쉬엔비"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeId": "T203",
+          "typeName": "마이크로니들 고주파 (Microneedle RF)",
+          "brands": [
+            {
+              "brandId": "B017",
+              "brandName": "제이시스메디칼 (Jeisys)",
+              "products": [
+                {
+                  "productId": "P203-001",
+                  "productName": "포텐자 (Potenza)",
+                  "searchKeywords": [
+                    "포텐자",
+                    "potenza",
+                    "제이시스"
+                  ]
+                },
+                {
+                  "productId": "P203-002",
+                  "productName": "인트라셀 (Intracel)",
+                  "searchKeywords": [
+                    "인트라셀",
+                    "intracel"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B026",
+              "brandName": "비올 (Viol)",
+              "products": [
+                {
+                  "productId": "P203-003",
+                  "productName": "실펌X (Sylfirm X)",
+                  "searchKeywords": [
+                    "실펌",
+                    "실펌엑스",
+                    "sylfirmx"
+                  ]
+                },
+                {
+                  "productId": "P203-004",
+                  "productName": "스칼렛 S (Scarlet S)",
+                  "searchKeywords": [
+                    "스칼렛",
+                    "scarlet"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B016",
+              "brandName": "이루다 (Ilooda)",
+              "products": [
+                {
+                  "productId": "P203-005",
+                  "productName": "시크릿 RF (Secret RF)",
+                  "searchKeywords": [
+                    "시크릿",
+                    "시크릿rf",
+                    "secretrf"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B025",
+              "brandName": "쉬엔비 (Shenb)",
+              "products": [
+                {
+                  "productId": "P203-006",
+                  "productName": "버츄 RF (Virtue RF)",
+                  "searchKeywords": [
+                    "버츄",
+                    "버츄rf",
+                    "virtuerf"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B027",
+              "brandName": "엔디메드 (Endymed)",
+              "products": [
+                {
+                  "productId": "P203-007",
+                  "productName": "엔디메드 PRO (Endymed PRO)",
+                  "searchKeywords": [
+                    "엔디메드",
+                    "endymed",
+                    "인텐시프"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeId": "T204",
+          "typeName": "복합 고주파 및 심부열 기기 (Bipolar/Multipolar RF)",
+          "brands": [
+            {
+              "brandId": "B028",
+              "brandName": "인모드 (InMode)",
+              "products": [
+                {
+                  "productId": "P204-001",
+                  "productName": "인모드 리프팅 (InMode MD)",
+                  "searchKeywords": [
+                    "인모드",
+                    "inmode",
+                    "미니fx",
+                    "포마"
+                  ]
+                },
+                {
+                  "productId": "P204-002",
+                  "productName": "모르페우스8 (Morpheus8)",
+                  "searchKeywords": [
+                    "모르페우스",
+                    "morpheus8"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B029",
+              "brandName": "인디바 (INDIBA)",
+              "products": [
+                {
+                  "productId": "P204-003",
+                  "productName": "인디바 딥케어 (INDIBA Deep Care)",
+                  "searchKeywords": [
+                    "인디바",
+                    "indiba",
+                    "딥케어"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B030",
+              "brandName": "코레지 (Corage)",
+              "products": [
+                {
+                  "productId": "P204-004",
+                  "productName": "코레지 셀핏 (Corage Cellfit)",
+                  "searchKeywords": [
+                    "코레지",
+                    "corage",
+                    "물결고주파",
+                    "코레지2"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B031",
+              "brandName": "비너스 컨셉 (Venus Concept)",
+              "products": [
+                {
+                  "productId": "P204-005",
+                  "productName": "비너스 레거시 (Venus Legacy)",
+                  "searchKeywords": [
+                    "비너스레거시",
+                    "venus legacy"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B032",
+              "brandName": "써미 (Thermi)",
+              "products": [
+                {
+                  "productId": "P204-006",
+                  "productName": "써미타이트 (ThermiTight)",
+                  "searchKeywords": [
+                    "써미타이트",
+                    "thermitight"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "C300",
+      "categoryName": "메디컬 스킨케어 및 에스테틱 기기",
+      "equipmentTypes": [
+        {
+          "typeId": "T301",
+          "typeName": "하이드라더마브레이전 (아쿠아필/모공청소)",
+          "brands": [
+            {
+              "brandId": "B033",
+              "brandName": "엣지 시스템즈 (Edge Systems)",
+              "products": [
+                {
+                  "productId": "P301-001",
+                  "productName": "하이드라페이셜 신데오 (HydraFacial Syndeo)",
+                  "searchKeywords": [
+                    "하이드라페이셜",
+                    "hydrafacial",
+                    "신데오"
+                  ]
+                },
+                {
+                  "productId": "P301-002",
+                  "productName": "하이드라페이셜 엘리트 (HydraFacial Elite)",
+                  "searchKeywords": [
+                    "하이드라페이셜엘리트",
+                    "hydrafacial elite"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B034",
+              "brandName": "은성글로벌 (Eunsung)",
+              "products": [
+                {
+                  "productId": "P301-003",
+                  "productName": "아쿠아필 (AquaPeel)",
+                  "searchKeywords": [
+                    "아쿠아필",
+                    "aquapeel",
+                    "은성아쿠아필"
+                  ]
+                },
+                {
+                  "productId": "P301-004",
+                  "productName": "하이드라 클린 (Hydra Clean)",
+                  "searchKeywords": [
+                    "하이드라클린",
+                    "hydraclean"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeId": "T302",
+          "typeName": "초음파 관리 기기 (물방울 리프팅 / LDM)",
+          "brands": [
+            {
+              "brandId": "B035",
+              "brandName": "웰코멧 (Wellcomet)",
+              "products": [
+                {
+                  "productId": "P302-001",
+                  "productName": "LDM 메드 (LDM MED)",
+                  "searchKeywords": [
+                    "ldm",
+                    "물방울리프팅",
+                    "ldm메드",
+                    "wellcomet"
+                  ]
+                },
+                {
+                  "productId": "P302-002",
+                  "productName": "LDM 트리플 (LDM Triple)",
+                  "searchKeywords": [
+                    "ldm트리플",
+                    "ldmtriple",
+                    "삼중파장"
+                  ]
+                },
+                {
+                  "productId": "P302-003",
+                  "productName": "LDM 스마트 (LDM Smart)",
+                  "searchKeywords": [
+                    "ldm스마트",
+                    "ldmsmart"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B034",
+              "brandName": "은성글로벌 (Eunsung)",
+              "products": [
+                {
+                  "productId": "P302-004",
+                  "productName": "포커스 듀얼 (Focus Dual)",
+                  "searchKeywords": [
+                    "포커스듀얼",
+                    "focusdual"
+                  ]
+                },
+                {
+                  "productId": "P302-005",
+                  "productName": "마이크로손 (Microson)",
+                  "searchKeywords": [
+                    "마이크로손",
+                    "microson"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B024",
+              "brandName": "아스테라시스 (Asterasys)",
+              "products": [
+                {
+                  "productId": "P302-006",
+                  "productName": "워터필 (WaterPeel)",
+                  "searchKeywords": [
+                    "워터필",
+                    "waterpeel"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeId": "T303",
+          "typeName": "이온토포레시스 및 크라이오 (진정/침투)",
+          "brands": [
+            {
+              "brandId": "B036",
+              "brandName": "유니온메디칼 (Union Medical)",
+              "products": [
+                {
+                  "productId": "P303-001",
+                  "productName": "크라이오셀 (CryoCell)",
+                  "searchKeywords": [
+                    "크라이오셀",
+                    "cryocell",
+                    "진정장비"
+                  ]
+                },
+                {
+                  "productId": "P303-002",
+                  "productName": "쿨엔즈 (Coolenz)",
+                  "searchKeywords": [
+                    "쿨엔즈",
+                    "coolenz"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B034",
+              "brandName": "은성글로벌 (Eunsung)",
+              "products": [
+                {
+                  "productId": "P303-003",
+                  "productName": "크라이오스탬프 (CryoStamp)",
+                  "searchKeywords": [
+                    "크라이오스탬프",
+                    "cryostamp"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "C400",
+      "categoryName": "스킨부스터 주입 및 재생 추출 장비",
+      "equipmentTypes": [
+        {
+          "typeId": "T401",
+          "typeName": "오토 인젝터 (Auto Injectors)",
+          "brands": [
+            {
+              "brandId": "B037",
+              "brandName": "휴온스메디텍 (Huons)",
+              "products": [
+                {
+                  "productId": "P401-001",
+                  "productName": "더마샤인 프로 (DermaShine Pro)",
+                  "searchKeywords": [
+                    "더마샤인",
+                    "dermashine",
+                    "더마샤인프로",
+                    "물광주사"
+                  ]
+                },
+                {
+                  "productId": "P401-002",
+                  "productName": "더마샤인 밸런스 (DermaShine Balance)",
+                  "searchKeywords": [
+                    "더마샤인밸런스",
+                    "dermashine balance"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B038",
+              "brandName": "파마리서치 (PharmaResearch)",
+              "products": [
+                {
+                  "productId": "P401-003",
+                  "productName": "리쥬메이트 (RejuMate)",
+                  "searchKeywords": [
+                    "리쥬메이트",
+                    "rejumate",
+                    "리쥬란주입기"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B039",
+              "brandName": "유투지 (U2G)",
+              "products": [
+                {
+                  "productId": "P401-004",
+                  "productName": "바이탈 인젝터 2 (Vital Injector 2)",
+                  "searchKeywords": [
+                    "바이탈인젝터",
+                    "vital injector"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B040",
+              "brandName": "쉬셀 (Suisselle)",
+              "products": [
+                {
+                  "productId": "P401-005",
+                  "productName": "에이프릴라인 인젝터 (Apriline Injector)",
+                  "searchKeywords": [
+                    "에이프릴라인",
+                    "apriline"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeId": "T402",
+          "typeName": "무바늘 주사기 (Needle-free Injectors)",
+          "brands": [
+            {
+              "brandId": "B041",
+              "brandName": "제이에스케이 (JSK)",
+              "products": [
+                {
+                  "productId": "P402-001",
+                  "productName": "미라젯 (Mirajet)",
+                  "searchKeywords": [
+                    "미라젯",
+                    "mirajet",
+                    "무바늘주사"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeId": "T403",
+          "typeName": "원심분리기 (PRP 및 줄기세포 분리)",
+          "brands": [
+            {
+              "brandId": "B042",
+              "brandName": "한일과학 (Hanil)",
+              "products": [
+                {
+                  "productId": "P403-001",
+                  "productName": "콤비 514R (Combi 514R)",
+                  "searchKeywords": [
+                    "한일과학",
+                    "원심분리기",
+                    "combi514r"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B043",
+              "brandName": "자이로젠 (Gyrozen)",
+              "products": [
+                {
+                  "productId": "P403-002",
+                  "productName": "416G 원심분리기 (416G)",
+                  "searchKeywords": [
+                    "자이로젠",
+                    "gyrozen",
+                    "416g"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B044",
+              "brandName": "이클립스 (Eclipse)",
+              "products": [
+                {
+                  "productId": "P403-003",
+                  "productName": "이클립스 PRP 원심분리기 (Eclipse PRP)",
+                  "searchKeywords": [
+                    "이클립스prp",
+                    "eclipse prp"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "C500",
+      "categoryName": "진단 및 검사 장비",
+      "equipmentTypes": [
+        {
+          "typeId": "T501",
+          "typeName": "피부 진단 및 안면 분석기",
+          "brands": [
+            {
+              "brandId": "B045",
+              "brandName": "캔필드 (Canfield)",
+              "products": [
+                {
+                  "productId": "P501-001",
+                  "productName": "비지아 에볼루션 (VISIA)",
+                  "searchKeywords": [
+                    "비지아",
+                    "visia",
+                    "캔필드"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B046",
+              "brandName": "콴티피케어 (QuantifiCare)",
+              "products": [
+                {
+                  "productId": "P501-002",
+                  "productName": "라이프비즈 미니 (LifeViz Mini)",
+                  "searchKeywords": [
+                    "라이프비즈",
+                    "lifeviz"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B047",
+              "brandName": "포토파인더 (FotoFinder)",
+              "products": [
+                {
+                  "productId": "P501-003",
+                  "productName": "ATBM 마스터 (ATBM Master)",
+                  "searchKeywords": [
+                    "포토파인더",
+                    "fotofinder",
+                    "atbm"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B048",
+              "brandName": "파이 (PIE)",
+              "products": [
+                {
+                  "productId": "P501-004",
+                  "productName": "야누스 프로 (JANUS Pro)",
+                  "searchKeywords": [
+                    "야누스",
+                    "janus",
+                    "야누스프로",
+                    "피부진단기"
+                  ]
+                },
+                {
+                  "productId": "P501-005",
+                  "productName": "야누스 프로 선라이크 (JANUS Pro Sunlike)",
+                  "searchKeywords": [
+                    "선라이크",
+                    "sunlike"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B049",
+              "brandName": "봄텍전자 (Bomtech)",
+              "products": [
+                {
+                  "productId": "P501-006",
+                  "productName": "에이원 스마트 (A-ONE Smart)",
+                  "searchKeywords": [
+                    "에이원스마트",
+                    "aone smart",
+                    "봄텍"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeId": "T502",
+          "typeName": "의료용 초음파 진단기 (Ultrasound)",
+          "brands": [
+            {
+              "brandId": "B050",
+              "brandName": "GE헬스케어 (GE Healthcare)",
+              "products": [
+                {
+                  "productId": "P502-001",
+                  "productName": "로직 E10 (LOGIQ E10)",
+                  "searchKeywords": [
+                    "ge초음파",
+                    "logiq",
+                    "로직e10"
+                  ]
+                },
+                {
+                  "productId": "P502-002",
+                  "productName": "로직 P9 (LOGIQ P9)",
+                  "searchKeywords": [
+                    "로직p9",
+                    "logiq p9"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B051",
+              "brandName": "삼성메디슨 (Samsung Medison)",
+              "products": [
+                {
+                  "productId": "P502-003",
+                  "productName": "RS85 초음파 진단기 (RS85)",
+                  "searchKeywords": [
+                    "삼성초음파",
+                    "삼성메디슨",
+                    "rs85"
+                  ]
+                },
+                {
+                  "productId": "P502-004",
+                  "productName": "V8 초음파 진단기 (V8)",
+                  "searchKeywords": [
+                    "삼성v8",
+                    "v8초음파"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B052",
+              "brandName": "필립스 (Philips)",
+              "products": [
+                {
+                  "productId": "P502-005",
+                  "productName": "에픽 엘리트 (Epiq Elite)",
+                  "searchKeywords": [
+                    "필립스초음파",
+                    "epiq",
+                    "에픽엘리트"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B053",
+              "brandName": "알피니언 (Alpinion)",
+              "products": [
+                {
+                  "productId": "P502-006",
+                  "productName": "이큐브 15 플래티넘 (E-CUBE 15 Platinum)",
+                  "searchKeywords": [
+                    "알피니언",
+                    "ecube",
+                    "이큐브"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B054",
+              "brandName": "클라리우스 (Clarius)",
+              "products": [
+                {
+                  "productId": "P502-007",
+                  "productName": "클라리우스 L20 HD3 (Clarius L20)",
+                  "searchKeywords": [
+                    "클라리우스",
+                    "휴대용초음파",
+                    "clarius"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "C600",
+      "categoryName": "바디 컨투어링 및 비만 관리 장비",
+      "equipmentTypes": [
+        {
+          "typeId": "T601",
+          "typeName": "냉각지방분해술 (Cryolipolysis)",
+          "brands": [
+            {
+              "brandId": "B055",
+              "brandName": "엘러간 (Allergan)",
+              "products": [
+                {
+                  "productId": "P601-001",
+                  "productName": "쿨스컬프팅 (CoolSculpting)",
+                  "searchKeywords": [
+                    "쿨스컬프팅",
+                    "coolsculpting",
+                    "젤틱"
+                  ]
+                },
+                {
+                  "productId": "P601-002",
+                  "productName": "쿨스컬프팅 엘리트 (CoolSculpting Elite)",
+                  "searchKeywords": [
+                    "쿨스컬프팅엘리트",
+                    "coolsculpting elite"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B021",
+              "brandName": "클래시스 (Classys)",
+              "products": [
+                {
+                  "productId": "P601-003",
+                  "productName": "클라투 (Clatuu)",
+                  "searchKeywords": [
+                    "클라투",
+                    "clatuu"
+                  ]
+                },
+                {
+                  "productId": "P601-004",
+                  "productName": "클라투 알파 (Clatuu Alpha)",
+                  "searchKeywords": [
+                    "클라투알파",
+                    "알파"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeId": "T602",
+          "typeName": "고강도 전자기장 및 충격파 (근육/셀룰라이트)",
+          "brands": [
+            {
+              "brandId": "B056",
+              "brandName": "비티엘 (BTL Aesthetics)",
+              "products": [
+                {
+                  "productId": "P602-001",
+                  "productName": "엠스컬프 (Emsculpt)",
+                  "searchKeywords": [
+                    "엠스컬프",
+                    "emsculpt",
+                    "btl"
+                  ]
+                },
+                {
+                  "productId": "P602-002",
+                  "productName": "엠스컬프 네오 (Emsculpt Neo)",
+                  "searchKeywords": [
+                    "엠스컬프네오",
+                    "emsculpt neo"
+                  ]
+                },
+                {
+                  "productId": "P602-003",
+                  "productName": "엑스웨이브 (X-Wave)",
+                  "searchKeywords": [
+                    "엑스웨이브",
+                    "xwave",
+                    "체외충격파"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B057",
+              "brandName": "스톨즈 메디칼 (Storz Medical)",
+              "products": [
+                {
+                  "productId": "P602-004",
+                  "productName": "듀오리트 SD1 (Duolith SD1)",
+                  "searchKeywords": [
+                    "스톨즈",
+                    "storz",
+                    "듀오리트",
+                    "sd1"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B058",
+              "brandName": "짐머 (Zimmer Aesthetics)",
+              "products": [
+                {
+                  "productId": "P602-005",
+                  "productName": "지웨이브 (Z Wave)",
+                  "searchKeywords": [
+                    "지웨이브",
+                    "zwave",
+                    "짐머"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeId": "T603",
+          "typeName": "레이저 및 고주파 지방분해",
+          "brands": [
+            {
+              "brandId": "B004",
+              "brandName": "사이노슈어 (Cynosure)",
+              "products": [
+                {
+                  "productId": "P603-001",
+                  "productName": "스컬프슈어 (SculpSure)",
+                  "searchKeywords": [
+                    "스컬프슈어",
+                    "sculpsure"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B028",
+              "brandName": "인모드 (InMode)",
+              "products": [
+                {
+                  "productId": "P603-002",
+                  "productName": "바디타이트 (BodyTite)",
+                  "searchKeywords": [
+                    "바디타이트",
+                    "bodytite"
+                  ]
+                },
+                {
+                  "productId": "P603-003",
+                  "productName": "페이스타이트 (FaceTite)",
+                  "searchKeywords": [
+                    "페이스타이트",
+                    "facetite"
+                  ]
+                }
+              ]
+            },
+            {
+              "brandId": "B059",
+              "brandName": "어코니아 (Erchonia)",
+              "products": [
+                {
+                  "productId": "P603-004",
+                  "productName": "에메랄드 레이저 (Emerald Laser)",
+                  "searchKeywords": [
+                    "에메랄드레이저",
+                    "emerald laser",
+                    "제로나"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
